@@ -3,4 +3,4 @@
 &lt;h2&gt;Elif Statement&lt;/h2&gt;
 &lt;p&gt;" The elif statement allows you to check multiple expressions for TRUE and execute a block of code as soon as one of the conditions evaluates to TRUE.&lt;/p&gt;
 &lt;p&gt;Similar to the else, the elif statement is optional. However, unlike else, for which there can be at most one statement, there can be an arbitrary number of elif statements following an if. "&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Image elif" class="noZoom" src="images/elif_statement.png" /&gt;&lt;/p&gt;</summary><category term="python"></category><category term="syntax, learnpython"></category></entry></feed>
+&lt;p&gt;&lt;img alt="Image elif" class="noZoom" src="images/elif_statement.png" /&gt;&lt;/p&gt;</summary><category term="python"></category><category term="syntax"></category><category term="/r/learnpython"></category></entry></feed>
