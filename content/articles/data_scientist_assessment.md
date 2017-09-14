@@ -1,5 +1,5 @@
 Title: Assess Yourself: Score your Data Scientist Profile
-Slug: data_scientist_assessment
+Slug: data-scientist-profile-assessment 
 Date: 2017-09-09 19:00
 Category: Skill Assessment 
 Tags: data science; mind maps; 
