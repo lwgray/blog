@@ -22,6 +22,7 @@ TIPUE_SEARCH = True
 TEMPLATE_PAGES = {
     'search.html': 'search.html',
     }
+ARTICLE_EDIT_LINK = 'https://github.com/lwgray/blog/edit/master/content/articles/%(slug)s.md'
 # END
 
 ROBOTS = 'index, follow'
