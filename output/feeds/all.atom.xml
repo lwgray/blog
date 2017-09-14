@@ -8,7 +8,7 @@
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.patches&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;patches&lt;/span&gt;
 
 &lt;span class="c1"&gt;# line below is included only if using jupyter notebook&lt;/span&gt;
-&lt;span class="c1"&gt;# get_ipython().magic(u&amp;#39;matplotlib inline&amp;#39;)&lt;/span&gt;
+&lt;span class="c1"&gt;# %matplotlib inline&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Score yourself on a scale of 1 to 5 in each of the categories&lt;/span&gt;
 &lt;span class="c1"&gt;# Place values in score list&lt;/span&gt;

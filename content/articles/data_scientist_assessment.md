@@ -18,7 +18,7 @@ I thought that creating my own data scientist profile could help me better ident
     import matplotlib.patches as patches
     
     # line below is included only if using jupyter notebook
-    # get_ipython().magic(u'matplotlib inline')
+    # %matplotlib inline
 
     # Score yourself on a scale of 1 to 5 in each of the categories
     # Place values in score list
