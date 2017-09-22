@@ -72,8 +72,9 @@ DEFAULT_PAGINATION = 10
 
 
 MARKUP = ('md')
-PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['sitemap', 'post_stats', 'related_posts', 'tipue_search']
+PLUGIN_PATHS = ['pelican-plugins', './plugins']
+PLUGINS = ['sitemap', 'post_stats', 'related_posts',
+           'tipue_search', 'ipynb.liquid']
 
 SITEMAP = {
     'format': 'xml',
@@ -93,3 +94,26 @@ DISQUS_SITENAME = "igotthegoodsuff"
 STATIC_PATHS = ['images', 'extra']
 USE_LESS = True
 #
+
+
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
+}
+
+
+'''
+MARKDOWN = {
+    'extensions' : ['codehilite', 'extra', 'latex'],
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
+}
+'''

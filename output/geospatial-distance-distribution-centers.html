@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>  data science
+    <title>  UpWork Client - What server nodes are closest to our customer?
  | Larry Gray</title>
 
     <meta name="author" content="Larry Gray"/>
@@ -29,6 +29,7 @@
 
     <!-- Feeds -->
       <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Larry Gray - All posts - Atom Feed"/>
+      <link href="/feeds/upwork.atom.xml" type="application/atom+xml" rel="alternate" title="Larry Gray - Category: Upwork - Atom Feed"/>
 
 
   </head>
@@ -84,8 +85,8 @@
 <li >
                   <a href="/category/skill-assessment.html">Skill Assessment</a>
                 </li>
-<li >
-                  <a href="/category/upwork.html">Upwork</a>
+<li  class="active" >
+                  <a href="/category/upwork.html">Upwork <span class="sr-only">(current)</span></a>
                 </li>
           </ul>
 
@@ -113,9 +114,9 @@
 
 
       <div class="row">
-        <div class=" col-md-12  ">
+        <div class=" col-md-9  ">
   <h1>
-    <a  href="/tag/data-science.html" rel="bookmark" title="Permalink to data science articles">data science articles</a>
+    <a href="/geospatial-distance-distribution-centers.html" rel="bookmark" title="Permalink to UpWork Client - What server nodes are closest to our customer?">UpWork Client - What server nodes are closest to our customer?</a>
   </h1>
         </div>
       </div>
@@ -123,13 +124,64 @@
       <div class="row">
 
 
-        <div class=" col-md-12 " id="content" role="main">
-  <dl class="dl-horizontal">
-      <dt><abbr class="published" title="2017-09-09T19:00:00-04:00">September 09, 2017</abbr></dt>
-      <dd><a href="/data-scientist-profile-assessment.html">Assess Yourself: Score your Data Scientist Profile</a></dd>
-  </dl>
+        <div class=" col-md-9 " id="content" role="main">
+  
+
+  <div>
+    <p>As a way to keep my skills fresh, I look for small jobs on <a href="https://www.upwork.com">Upwork</a> that require python .  For today`s challenge, a client wanted to determine which two servers within a regional zone are closest to their customer.  The client provided a dictionary(see partial dict below, full provided in PLACES.py) with information about each server; the city, ip address, the location, and zone.</p>
+<div class="highlight"><pre><span></span><span class="n">PLACES</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;Amsterdam&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;IP&quot;</span><span class="p">:</span> <span class="s1">&#39;208.65.255.10&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">52.370216</span><span class="p">,</span>
+    <span class="s2">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">4.895168</span><span class="p">,</span>  
+    <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">]</span>
+  <span class="p">},</span> 
+  <span class="s2">&quot;Brussels&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;IP&quot;</span><span class="p">:</span> <span class="s1">&#39;208.65.255.10&#39;</span><span class="p">,</span>  
+    <span class="s2">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">50.850346</span><span class="p">,</span>
+    <span class="s2">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">4.351721</span><span class="p">,</span>  
+    <span class="s2">&quot;zone&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="s1">&#39;3&#39;</span><span class="p">]</span>
+  <span class="p">}}</span>
+</pre></div>
+
+
+<p>The input arguments for this function(fxn) would be the customer`s location(latitude and longitude) and the regional zone.</p>
+<p>Let`s look at an example before we code anything to decide what tasks we need to tackle to accomplish this job request.
+I live in Baltimore, MD.  My coordiantes are (39.290385, -76.612189).  How would I determine which server node I am closest to in Zone 1. To solve this problem, I would follow the steps below.</p>
+<p>{% notebook geospatial_blog.ipynb %}</p>
+  </div>
+
+
+
         </div>
 
+          <div class="col-md-3">
+  <div class="well">
+
+    <p><abbr title="2017-09-22T08:22:00-04:00"><i class="fa fa-calendar"></i> September 22, 2017</abbr></p>
+
+      <p><address>
+        <i class="fa fa-user"></i> By
+          <a href="/author/larry-gray.html" rel="author">Larry Gray</a>
+      </address></p>
+
+    <hr/>
+
+      <p>
+              <a href="/category/upwork.html" rel="tag"
+                  data-toggle="tooltip" class="label label-info"
+                  title="1 article in this category">Upwork</a>
+            <a href="/tag/geospatial-python.html" data-toggle="tooltip"
+      class="label label-default"
+      title="1 article with this tag">geospatial, python</a>
+      </p>
+      <hr/>
+
+
+
+  </div>
+            
+          </div>
 
       </div>
 
@@ -191,6 +243,7 @@
               <h5>Feeds</h5>
               <ul class="list-unstyled">
                   <li><small><a href="/feeds/all.atom.xml"><i class="fa fa-rss"></i> All posts (Atom)</a></small></li>
+                  <li><small><a href="/feeds/upwork.atom.xml"><i class="fa fa-rss"></i> Category: Upwork (Atom)</a></small></li>
               </ul>
           </div>
 

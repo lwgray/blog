@@ -1,0 +1,90 @@
+Title:  UpWork Client - What server nodes are closest to our customer?
+slug: geospatial-distance-distribution-centers
+Date: 2017-09-22 08:22
+Category: Upwork
+Tags: geospatial, python;
+Author: Larry Gray
+
+As a way to keep my skills fresh, I look for small jobs on [Upwork](https://www.upwork.com) that require python .  For today`s challenge, a client wanted to determine which two servers within a regional zone are closest to their customer.  The client provided a dictionary(see partial dict below, full provided in PLACES.py) with information about each server; the city, ip address, the location, and zone.
+
+
+    :::python
+    PLACES = {
+      "Amsterdam": {
+        "IP": '208.65.255.10',
+        "latitude": 52.370216,
+        "longitude": 4.895168,  
+        "zone": ['1','2']
+      }, 
+      "Brussels": {
+        "IP": '208.65.255.10',  
+        "latitude": 50.850346,
+        "longitude": 4.351721,  
+        "zone": ['1','2','3']
+      }}
+
+The input arguments for this function(fxn) would be the customer`s location(latitude and longitude) and the regional zone.
+
+Let`s look at an example before we code anything to decide what tasks we need to tackle to accomplish this job request.
+I live in Baltimore, MD.  My coordiantes are (39.290385, -76.612189).  How would I determine which server node I am closest to in Zone 1. To solve this problem, I would follow the steps below.
+
+
+A. Determine which server nodes are in Zone
+===========================================
+
+
+    :::python
+    def cities_in_zone(zone):
+        ''' select cities by provided zone number
+        zone: str; the zone which a city is designated to
+        return: list
+        '''
+        cities = []
+        for city, value in PLACES.iteritems():
+            if str(zone) in value['zone']:
+                cities.append(city)
+        return cities
+
+
+
+B. Figure out the distance between each Zone 1 server and me.
+=============================================================
+
+
+    :::python
+    def closest_cities(lat, lgt, zone, num=2):
+        ''' Find cities closest to designated location within a zone
+        lat: float; latitude
+        lgt: float; longitude
+        zone: str; the zone which a city is designated to
+        num: int, the number of cities that should be designated as closest
+        '''
+        dist = []
+        start = (lat,lgt)
+        cities = cities_in_zone(zone)
+        for city in cities:
+            distance = vincenty(start, (PLACES[city]['latitude'], PLACES[city]['longitude']))
+            dist.append((city, distance.miles))
+        final = find_min_distances(dist, num)
+        return final    
+    
+
+C. Decide which two servers in Zone 1 are closest to me    
+=======================================================
+
+
+    :::python
+    def find_min_distances(distances, numbers):
+    ''' From the calculated geo distances find the smallest
+    distances: list; list containing city name and distance value in miles
+    numbers: int; the number of cities to return
+    return: dict
+    '''
+        final = {}
+        if numbers > len(distances):
+            numbers = len(distances)
+        for num in range(numbers):
+            b = min([x[1] for x in enumerate(distances)], key=itemgetter(1))
+            final[b[0]] = {'IP':PLACES[b[0]]['IP']}
+            distances.remove(b)
+        return final

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Larry Gray</title><link href="/" rel="alternate"></link><link href="/feeds/upwork.atom.xml" rel="self"></link><id>/</id><updated>2017-09-22T08:22:00-04:00</updated><entry><title>UpWork Client - What server nodes are closest to our customer?</title><link href="/geospatial-distance-distribution-centers.html" rel="alternate"></link><published>2017-09-22T08:22:00-04:00</published><updated>2017-09-22T08:22:00-04:00</updated><author><name>Larry Gray</name></author><id>tag:,2017-09-22:geospatial-distance-distribution-centers.html</id><summary type="html">&lt;p&gt;As a way to keep my skills fresh, I look for small jobs on &lt;a href="https://www.upwork.com"&gt;Upwork&lt;/a&gt; that require python .  For today`s challenge, a client wanted to determine which two servers within a regional zone are closest to their customer.  The client provided a dictionary(see partial dict below, full provided in PLACES.py) with information about each server; the city, ip address, the location, and zone.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;PLACES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="s2"&gt;&amp;quot;Amsterdam&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;IP&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;208.65.255.10&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;latitude&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;52.370216&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;longitude&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;4.895168&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  
+    &lt;span class="s2"&gt;&amp;quot;zone&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt; 
+  &lt;span class="s2"&gt;&amp;quot;Brussels&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;IP&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;208.65.255.10&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  
+    &lt;span class="s2"&gt;&amp;quot;latitude&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;50.850346&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;longitude&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;4.351721&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  
+    &lt;span class="s2"&gt;&amp;quot;zone&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;3&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;}}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The input arguments for this function(fxn) would be the customer`s location(latitude and longitude) and the regional zone.&lt;/p&gt;
+&lt;p&gt;Let`s look at an example before we code anything to decide what tasks we need to tackle to accomplish this job request.
+I live in Baltimore, MD.  My coordiantes are (39.290385, -76.612189).  How would I determine which server node I am closest to in Zone 1. To solve this problem, I would follow the steps below.&lt;/p&gt;
+&lt;p&gt;{% notebook geospatial_blog.ipynb %}&lt;/p&gt;</summary><category term="geospatial, python"></category></entry></feed>
