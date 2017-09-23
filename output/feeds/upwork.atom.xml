@@ -978,7 +978,7 @@ h6:hover .anchor-link {
 &lt;p&gt;As a way to keep my skills fresh, I look for small jobs on &lt;a href="https://www.upwork.com"&gt;Upwork&lt;/a&gt; that require python .&lt;/p&gt;
 &lt;p&gt;A tech company with servers all over the world wanted to determine which two servers within a regional zone are closest to their web application user.  Once this is known, the client wants you to report back the city the servers are in and their IP addresses.&lt;/p&gt;
 &lt;p&gt;I challenge you to answer this question in your own way.  Or, just follow along with how I approached it&lt;/p&gt;
-&lt;p&gt;The client provided a dictionary (see partial dict below, full provided in &lt;a href="https://github.com/lwgray/blog/content/articles/places.py"&gt;places.py&lt;/a&gt;) with information about each server; the city, ip address, the location, and zone.&lt;/p&gt;
+&lt;p&gt;The client provided a dictionary (see partial dict below, full provided in &lt;a href="https://github.com/lwgray/blog/blob/master/content/articles/places.py"&gt;places.py&lt;/a&gt;) with information about each server; the city, ip address, the location, and zone.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1187,4 +1187,4 @@ h6:hover .anchor-link {
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="geospatial, python"></category></entry></feed>
+</summary><category term="geospatial"></category><category term="python"></category></entry></feed>

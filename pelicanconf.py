@@ -71,10 +71,10 @@ DEFAULT_PAGINATION = 10
 # RELATIVE_URLS = True
 
 
-MARKUP = ('md', 'ipynb')
+# MARKUP = ('md', 'ipynb')
 PLUGIN_PATHS = ['pelican-plugins', './plugins']
 PLUGINS = ['sitemap', 'post_stats', 'related_posts',
-           'tipue_search', 'ipynb.markup']
+           'tipue_search', 'ipynb.markup', 'ipynb.liquid']
 
 SITEMAP = {
     'format': 'xml',
@@ -95,7 +95,7 @@ STATIC_PATHS = ['images', 'extra']
 USE_LESS = True
 #
 
-
+'''
 MARKDOWN = {
     'extension_configs': {
         'markdown.extensions.codehilite': {'css_class': 'highlight'},
@@ -104,5 +104,32 @@ MARKDOWN = {
     },
     'output_format': 'html5',
 }
+'''
+
+
+MARKDOWN = {
+    'extension_configs': {
+        # https://pythonhosted.org/Markdown/extensions/index.html#officially-supported-extensions
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.meta': {},
+        'markdown.extensions.sane_lists': {},
+        'markdown.extensions.smarty': {},
+        'markdown.extensions.toc': {'permalink': True},
+        'mdx_video': {},
+        'mdx_titlecase': {},
+        # https://facelessuser.github.io/pymdown-extensions/
+        'pymdownx.extra': {},
+        'pymdownx.caret': {'superscript': True},
+        'pymdownx.magiclink': {},
+        'pymdownx.smartsymbols': {},
+    },
+    'output_format': 'html5',
+    # Allow numbered lists to not start with 1. Used in following article:
+    # https://kevin.deldycke.com/2016/12/falsehoods-programmers-believe-about-falsehoods-lists/
+    # See: https://pythonhosted.org/Markdown/reference.html#lazy_ol
+    'lazy_ol': False,
+}
+
 
 IGNORE_FILES = ['.ipynb_checkpoints']
+DISPLAY_CATEGORIES_ON_MENU = False

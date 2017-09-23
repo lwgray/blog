@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.igotthegoodstuff.com/</loc>
-<lastmod>2017-09-22T18:06:33-00:00</lastmod>
+<lastmod>2017-09-23T05:48:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://www.igotthegoodstuff.com/archives.html</loc>
-<lastmod>2017-09-22T18:06:33-00:00</lastmod>
+<lastmod>2017-09-23T05:48:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://www.igotthegoodstuff.com/tags.html</loc>
-<lastmod>2017-09-22T18:06:33-00:00</lastmod>
+<lastmod>2017-09-23T05:48:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://www.igotthegoodstuff.com/categories.html</loc>
-<lastmod>2017-09-22T18:06:33-00:00</lastmod>
+<lastmod>2017-09-23T05:48:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://www.igotthegoodstuff.com/search.html</loc>
-<lastmod>2017-09-22T18:06:33-00:00</lastmod>
+<lastmod>2017-09-23T05:48:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -96,7 +96,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.igotthegoodstuff.com/tag/python.html</loc>
-<lastmod>2017-09-14T11:22:00-04:56</lastmod>
+<lastmod>2017-09-22T08:22:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -116,7 +116,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://www.igotthegoodstuff.com/tag/geospatial-python.html</loc>
+<loc>http://www.igotthegoodstuff.com/tag/geospatial.html</loc>
 <lastmod>2017-09-22T08:22:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
