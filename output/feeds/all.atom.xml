@@ -975,10 +975,9 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;As a way to keep my skills fresh, I look for small jobs on &lt;a href="https://www.upwork.com"&gt;Upwork&lt;/a&gt; that require python .&lt;/p&gt;
-&lt;p&gt;A tech company with servers all over the world wanted to determine which two servers within a regional zone are closest to their web application user.  Once this is known, the client wants you to report back the city the servers are in and their IP addresses.&lt;/p&gt;
-&lt;p&gt;I challenge you to answer this question in your own way.  Or, just follow along with how I approached it&lt;/p&gt;
-&lt;p&gt;The client provided a dictionary (see partial dict below, full provided in &lt;a href="https://github.com/lwgray/blog/blob/master/content/articles/places.py"&gt;places.py&lt;/a&gt;) with information about each server; the city, ip address, the location, and zone.&lt;/p&gt;
+&lt;p&gt;As a way to keep my skills fresh, I look for small jobs on &lt;a href="https://www.upwork.com"&gt;Upwork&lt;/a&gt; that require python.  Here is one of the job request I came across yesterday.&lt;/p&gt;
+&lt;p&gt;A tech company, Company X, with servers all over the world wanted to determine which two servers within a regional zone are closest to their web application users.  Company X wants us to report back the name of cities that the servers are in and their IP addresses.  Company X provided a dictionary object (see partial dict below, the full dict is provided at &lt;a href="https://github.com/lwgray/blog/blob/master/content/articles/places.py"&gt;places.py&lt;/a&gt;) with pertinent information. The dictionary contains the city, ip address, coordinates, and zone for each server..&lt;/p&gt;
+&lt;p&gt;I challenge you to answer this question in your own way.  Or, just follow along with how I approached it.  More details about this exercise will be discussed below.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1010,8 +1009,10 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;I live in Baltimore, MD.  My coordiantes are (39.290385, -76.612189).  How would I determine which server node I am closest to in Zone 1.&lt;/p&gt;
-&lt;p&gt;To solve this problem, I would follow the steps below.&lt;/p&gt;
+&lt;p&gt;Let's begin by pretending that I am a client of Company X.  I live in Baltimore, MD and I spend all day on their new web app.  I currently can not use the app because Company X is having technical issues.  To fix this problem they have decided to route all web traffic to servers in Zone 1.&lt;/p&gt;
+&lt;p&gt;Company X wants its users to still have the fastest speed while connecting to the app thus they want to send each user's data to the closest city in Zone 1.  Additionally, Company X requires redundacy, so they want us to report back the two closests cities.&lt;/p&gt;
+&lt;p&gt;Your company,PyTechGroup, was hired by Company X to fix this problem. How could we determine which cities I am closest to in Zone 1.  My coordinates are (39.290385, -76.612189).&lt;/p&gt;
+&lt;p&gt;To solve this problem, Let's follow the steps below.  Let's start with prerequisites, packages and imports.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1019,20 +1020,29 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;A. Determine which server nodes are in Zone 1&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython2"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;places&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;places&lt;/span&gt;
+&lt;h3 id="Prequistes/packages"&gt;Prequistes/packages&lt;a class="anchor-link" href="#Prequistes/packages"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;I will be using python2.7&lt;/li&gt;
+&lt;li&gt;We need to install &lt;a href="https://github.com/geopy/geopy"&gt;geopy&lt;/a&gt; package.  It will allow us to measure  distance(miles) between cities.&lt;/li&gt;
+&lt;li&gt;Import Statements&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python --version
+Python &lt;span class="m"&gt;2&lt;/span&gt;.7.13 :: Continuum Analytics, Inc
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pip install geopy
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;places&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;places&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;geopy.distance&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;vincenty&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;operator&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;itemgetter&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="A.-Which-cities-are-in-Zone-1?"&gt;A. Which cities are in Zone 1?&lt;a class="anchor-link" href="#A.-Which-cities-are-in-Zone-1?"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In this function(cities_in_zone) we are simply iterating through Company X's dictionary, pulling out the name of the cities in Zone 1, and appending the names to a list.&lt;/p&gt;
+&lt;p&gt;As a side note, some of the zones are overlapping, ie a city can exist in more than one zone.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1060,7 +1070,8 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;B. Figure out the distance between each Zone 1 server and me.&lt;/p&gt;
+&lt;h3 id="B.-What-is-the-distance-between-each-Zone-1-city-and-me?"&gt;B. What is the distance between each Zone 1 city and me?&lt;a class="anchor-link" href="#B.-What-is-the-distance-between-each-Zone-1-city-and-me?"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The next step is for us to determine the distance between me and each city in Zone 1.  In the 'closest_cities'function, we input my location and the city coordinates into geopy's vincenty function to derive the distance in miles.  Next, we append the city's name and distance to a list.&lt;/p&gt;
+&lt;p&gt;STOP: USELESS INFO: &lt;a href="https://en.wikipedia.org/wiki/Vincenty%27s_formulae"&gt;Vincenty&lt;/a&gt; is a highly accurate method for measuring distances, unlike other methods, its accuracy doesn't depend on your location.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1093,7 +1104,8 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;C. Decide which two servers in Zone 1 are closest to me - I chose &lt;a href=""&gt;geopy&lt;/a&gt; to measure the distance using vincenty method&lt;/p&gt;
+&lt;h3 id="C.-Which-two-cities-in-Zone-1-are-closest-to-me?"&gt;C. Which two cities in Zone 1 are closest to me?&lt;a class="anchor-link" href="#C.-Which-two-cities-in-Zone-1-are-closest-to-me?"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In the previous function "find_min_distances" was called to find the smallest distance between a city and me. "find_min_distances" takes two arguments.  Firstly, a list of lists containing the city names and their distances from me.  Secondly, an integer that specifies how many cities to return to Company X.&lt;/p&gt;
+&lt;p&gt;The output from "find_min_distances" is a dict with the city name as the key and its IP address as a value.  It is returned as a dict simply because Company X wanted the answer as a dict object.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1125,7 +1137,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Which server is closest to Baltimore?&lt;/p&gt;
+&lt;h3 id="Finally,-which-cities-are-closest-to-Baltimore?"&gt;Finally, which cities are closest to Baltimore?&lt;a class="anchor-link" href="#Finally,-which-cities-are-closest-to-Baltimore?"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

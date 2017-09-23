@@ -1095,10 +1095,9 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As a way to keep my skills fresh, I look for small jobs on <a href="https://www.upwork.com">Upwork</a> that require python .</p>
-<p>A tech company with servers all over the world wanted to determine which two servers within a regional zone are closest to their web application user.  Once this is known, the client wants you to report back the city the servers are in and their IP addresses.</p>
-<p>I challenge you to answer this question in your own way.  Or, just follow along with how I approached it</p>
-<p>The client provided a dictionary (see partial dict below, full provided in <a href="https://github.com/lwgray/blog/blob/master/content/articles/places.py">places.py</a>) with information about each server; the city, ip address, the location, and zone.</p>
+<p>As a way to keep my skills fresh, I look for small jobs on <a href="https://www.upwork.com">Upwork</a> that require python.  Here is one of the job request I came across yesterday.</p>
+<p>A tech company, Company X, with servers all over the world wanted to determine which two servers within a regional zone are closest to their web application users.  Company X wants us to report back the name of cities that the servers are in and their IP addresses.  Company X provided a dictionary object (see partial dict below, the full dict is provided at <a href="https://github.com/lwgray/blog/blob/master/content/articles/places.py">places.py</a>) with pertinent information. The dictionary contains the city, ip address, coordinates, and zone for each server..</p>
+<p>I challenge you to answer this question in your own way.  Or, just follow along with how I approached it.  More details about this exercise will be discussed below.</p>
 </div>
 </div>
 </div>
@@ -1130,8 +1129,10 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I live in Baltimore, MD.  My coordiantes are (39.290385, -76.612189).  How would I determine which server node I am closest to in Zone 1.</p>
-<p>To solve this problem, I would follow the steps below.</p>
+<p>Let's begin by pretending that I am a client of Company X.  I live in Baltimore, MD and I spend all day on their new web app.  I currently can not use the app because Company X is having technical issues.  To fix this problem they have decided to route all web traffic to servers in Zone 1.</p>
+<p>Company X wants its users to still have the fastest speed while connecting to the app thus they want to send each user's data to the closest city in Zone 1.  Additionally, Company X requires redundacy, so they want us to report back the two closests cities.</p>
+<p>Your company,PyTechGroup, was hired by Company X to fix this problem. How could we determine which cities I am closest to in Zone 1.  My coordinates are (39.290385, -76.612189).</p>
+<p>To solve this problem, Let's follow the steps below.  Let's start with prerequisites, packages and imports.</p>
 </div>
 </div>
 </div>
@@ -1139,20 +1140,29 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A. Determine which server nodes are in Zone 1</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [2]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">places</span> <span class="kn">import</span> <span class="n">places</span>
+<h3 id="Prequistes/packages">Prequistes/packages<a class="anchor-link" href="#Prequistes/packages">¶</a></h3><ol>
+<li>I will be using python2.7</li>
+<li>We need to install <a href="https://github.com/geopy/geopy">geopy</a> package.  It will allow us to measure  distance(miles) between cities.</li>
+<li>Import Statements</li>
+</ol>
+<div class="highlight"><pre><span></span>python --version
+Python <span class="m">2</span>.7.13 :: Continuum Analytics, Inc
+</pre></div>
+<div class="highlight"><pre><span></span>$ pip install geopy
+</pre></div>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">places</span> <span class="kn">import</span> <span class="n">places</span>
 <span class="kn">from</span> <span class="nn">geopy.distance</span> <span class="kn">import</span> <span class="n">vincenty</span>
 <span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="A.-Which-cities-are-in-Zone-1?">A. Which cities are in Zone 1?<a class="anchor-link" href="#A.-Which-cities-are-in-Zone-1?">¶</a></h3><p>In this function(cities_in_zone) we are simply iterating through Company X's dictionary, pulling out the name of the cities in Zone 1, and appending the names to a list.</p>
+<p>As a side note, some of the zones are overlapping, ie a city can exist in more than one zone.</p>
 </div>
 </div>
 </div>
@@ -1180,7 +1190,8 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>B. Figure out the distance between each Zone 1 server and me.</p>
+<h3 id="B.-What-is-the-distance-between-each-Zone-1-city-and-me?">B. What is the distance between each Zone 1 city and me?<a class="anchor-link" href="#B.-What-is-the-distance-between-each-Zone-1-city-and-me?">¶</a></h3><p>The next step is for us to determine the distance between me and each city in Zone 1.  In the 'closest_cities'function, we input my location and the city coordinates into geopy's vincenty function to derive the distance in miles.  Next, we append the city's name and distance to a list.</p>
+<p>STOP: USELESS INFO: <a href="https://en.wikipedia.org/wiki/Vincenty%27s_formulae">Vincenty</a> is a highly accurate method for measuring distances, unlike other methods, its accuracy doesn't depend on your location.</p>
 </div>
 </div>
 </div>
@@ -1213,7 +1224,8 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>C. Decide which two servers in Zone 1 are closest to me - I chose <a href="">geopy</a> to measure the distance using vincenty method</p>
+<h3 id="C.-Which-two-cities-in-Zone-1-are-closest-to-me?">C. Which two cities in Zone 1 are closest to me?<a class="anchor-link" href="#C.-Which-two-cities-in-Zone-1-are-closest-to-me?">¶</a></h3><p>In the previous function "find_min_distances" was called to find the smallest distance between a city and me. "find_min_distances" takes two arguments.  Firstly, a list of lists containing the city names and their distances from me.  Secondly, an integer that specifies how many cities to return to Company X.</p>
+<p>The output from "find_min_distances" is a dict with the city name as the key and its IP address as a value.  It is returned as a dict simply because Company X wanted the answer as a dict object.</p>
 </div>
 </div>
 </div>
@@ -1245,7 +1257,7 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Which server is closest to Baltimore?</p>
+<h3 id="Finally,-which-cities-are-closest-to-Baltimore?">Finally, which cities are closest to Baltimore?<a class="anchor-link" href="#Finally,-which-cities-are-closest-to-Baltimore?">¶</a></h3>
 </div>
 </div>
 </div>
