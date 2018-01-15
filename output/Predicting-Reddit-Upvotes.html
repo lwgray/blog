@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>  UpWork Challenge - What server nodes are closest to our customer?
+    <title>  Can Machine Learning predict how many upvotes your post will receive? Part 1.
  | Larry Gray</title>
 
     <meta name="author" content="Larry Gray"/>
@@ -29,7 +29,7 @@
 
     <!-- Feeds -->
       <link href="http://www.igotthegoodstuff.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Larry Gray - All posts - Atom Feed"/>
-      <link href="http://www.igotthegoodstuff.com/feeds/upwork.atom.xml" type="application/atom+xml" rel="alternate" title="Larry Gray - Category: Upwork - Atom Feed"/>
+      <link href="http://www.igotthegoodstuff.com/feeds/machine-learning.atom.xml" type="application/atom+xml" rel="alternate" title="Larry Gray - Category: Machine Learning - Atom Feed"/>
 
 
   </head>
@@ -107,7 +107,7 @@
       <div class="row">
         <div class=" col-md-9  ">
   <h1>
-    <a href="http://www.igotthegoodstuff.com/geospatial-distance-distribution-centers.html" rel="bookmark" title="Permalink to UpWork Challenge - What server nodes are closest to our customer?">UpWork Challenge - What server nodes are closest to our customer?</a>
+    <a href="http://www.igotthegoodstuff.com/Predicting-Reddit-Upvotes.html" rel="bookmark" title="Permalink to Can Machine Learning predict how many upvotes your post will receive? Part 1.">Can Machine Learning predict how many upvotes your post will receive? Part 1.</a>
   </h1>
         </div>
       </div>
@@ -194,204 +194,90 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As a way to keep my skills fresh, I look for small jobs on <a href="https://www.upwork.com">Upwork</a> that require python.  Here is one of the job request I came across yesterday.</p>
-<p>A tech company, Company X, with servers all over the world wanted to determine which two servers within a regional zone are closest to their web application users.  Company X wants us to report back the name of cities that the servers are in and their IP addresses.  Company X provided a dictionary object (see partial dict below, the full dict is provided at <a href="https://github.com/lwgray/blog/blob/master/content/articles/places.py">places.py</a>) with pertinent information. The dictionary contains the city, ip address, coordinates, and zone for each server..</p>
-<p>I challenge you to answer this question in your own way.  Or, just follow along with how I approached it.  More details about this exercise will be discussed below.</p>
+<p>At University of Maryland, Baltimore County's annual hackathon, 5 guys came together to produce an single page web app.  The app was named Calzone.  Calzone's purpose was to predict the number of upvotes a Redditt post would receive based solely on the title.</p>
+<p>This blog article is a 12 part series that will describe the data collection, feature extraction, and regression analysis(prediction) used to build Calzone.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="PART-1:--Data-Collection">PART 1:  Data Collection<a class="anchor-link" href="#PART-1:--Data-Collection">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We chose to collect a year's worth of posts from the r/politics subreddit.  We used the PRAW <a href="https://github.com/praw-dev/praw">package</a> to access Reddit's api.  To submit an api request, you first must request OAuth credentials from Reddit.  See <a href="https://github.com/reddit/reddit/wiki/OAuth2">here</a> for instructions on how to do such.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now that we have our credentials let's get going.  The full code is below. We will begin by initializing a reddit instance.  We next select a subreddit and retrieve the submissions for the past year.  Selection of posts over a given time frame requires that a timestamp be specified.  The 'get_timestamps' function allows you to input the beginning and end dates (format 01/01/2001).  The submissions variable is a generator object and contains all the data.  We looped through the submissions and obtained the id, title, number of votes, url, and creation date for each post. Finally, the collected data is saved to a pandas dataframe object then written to a csv file.  The follow-up article will deal with data cleanup and exploratory analysis.  See you around!</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [1]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Partial view of dictionary with client server information</span>
-<span class="n">PLACES</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="s2">"Amsterdam"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"IP"</span><span class="p">:</span> <span class="s1">'208.65.255.10'</span><span class="p">,</span>
-        <span class="s2">"latitude"</span><span class="p">:</span> <span class="mf">52.370216</span><span class="p">,</span>
-        <span class="s2">"longitude"</span><span class="p">:</span> <span class="mf">4.895168</span><span class="p">,</span>
-        <span class="s2">"zone"</span><span class="p">:</span> <span class="p">[</span><span class="s1">'1'</span><span class="p">,</span><span class="s1">'2'</span><span class="p">]</span>
-      <span class="p">},</span>
-      <span class="s2">"Brussels"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"IP"</span><span class="p">:</span> <span class="s1">'208.65.255.10'</span><span class="p">,</span>
-        <span class="s2">"latitude"</span><span class="p">:</span> <span class="mf">50.850346</span><span class="p">,</span>
-        <span class="s2">"longitude"</span><span class="p">:</span> <span class="mf">4.351721</span><span class="p">,</span>
-        <span class="s2">"zone"</span><span class="p">:</span> <span class="p">[</span><span class="s1">'1'</span><span class="p">,</span><span class="s1">'2'</span><span class="p">,</span><span class="s1">'3'</span><span class="p">]</span>
-      <span class="p">}}</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's begin by pretending that I am a client of Company X.  I live in Baltimore, MD and I spend all day on their new web app.  I currently can not use the app because Company X is having technical issues.  To fix this problem they have decided to route all web traffic to servers in Zone 1.</p>
-<p>Company X wants its users to still have the fastest speed while connecting to the app thus they want to send each user's data to the closest city in Zone 1.  Additionally, Company X requires redundacy, so they want us to report back the two closests cities.</p>
-<p>Your company,PyTechGroup, was hired by Company X to fix this problem. How could we determine which cities I am closest to in Zone 1.  My coordinates are (39.290385, -76.612189).</p>
-<p>To solve this problem, Let's follow the steps below.  Let's start with prerequisites, packages and imports.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Prequistes/packages">Prequistes/packages<a class="anchor-link" href="#Prequistes/packages">¶</a></h3><ol>
-<li>I will be using python2.7</li>
-<li>We need to install <a href="https://github.com/geopy/geopy">geopy</a> package.  It will allow us to measure  distance(miles) between cities.</li>
-<li>Import Statements</li>
-</ol>
-<div class="highlight"><pre><span></span>python --version
-Python 2.7.13 :: Continuum Analytics, Inc
-</pre></div>
-<div class="highlight"><pre><span></span>$ pip install geopy
-</pre></div>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">places</span> <span class="kn">import</span> <span class="n">places</span>
-<span class="kn">from</span> <span class="nn">geopy.distance</span> <span class="kn">import</span> <span class="n">vincenty</span>
-<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A.-Which-cities-are-in-Zone-1?">A. Which cities are in Zone 1?<a class="anchor-link" href="#A.-Which-cities-are-in-Zone-1?">¶</a></h3><p>In this function(cities_in_zone) we are simply iterating through Company X's dictionary, pulling out the name of the cities in Zone 1, and appending the names to a list.</p>
-<p>As a side note, some of the zones are overlapping, ie a city can exist in more than one zone.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [3]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">cities_in_zone</span><span class="p">(</span><span class="n">zone</span><span class="p">):</span>
-    <span class="sd">''' select cities by provided zone number</span>
-<span class="sd">    zone: str; the zone which a city is designated to</span>
-<span class="sd">    return: list</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">calendar</span>
+<span class="kn">import</span> <span class="nn">praw</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+
+
+<span class="c1"># To specifying date ranges in PRAW require timestamps</span>
+<span class="k">def</span> <span class="nf">get_timestamps</span><span class="p">(</span><span class="n">time1</span><span class="p">,</span><span class="n">time2</span><span class="p">):</span>
+    <span class="sd">''' Convert date range into timestamps</span>
+<span class="sd">    </span>
+<span class="sd">    time1(str):  start date formated as 01/01/2001</span>
+<span class="sd">    time2(str):  end date formated as 01/01/2001</span>
+<span class="sd">    </span>
+<span class="sd">    returns(str) start and end timestamps</span>
 <span class="sd">    '''</span>
-    <span class="n">cities</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">city</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">places</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
-        <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">zone</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="p">[</span><span class="s1">'zone'</span><span class="p">]:</span>
-            <span class="n">cities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">cities</span>
+    <span class="n">month1</span><span class="p">,</span> <span class="n">day1</span><span class="p">,</span> <span class="n">year1</span> <span class="o">=</span> <span class="n">time1</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+    <span class="n">month2</span><span class="p">,</span> <span class="n">day2</span><span class="p">,</span> <span class="n">year2</span> <span class="o">=</span> <span class="n">time2</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+    <span class="n">dt1</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">year1</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">month1</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">day1</span><span class="p">))</span>
+    <span class="n">dt2</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">year2</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">month2</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">day2</span><span class="p">))</span>
+    <span class="n">t1</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="n">timegm</span><span class="p">(</span><span class="n">dt1</span><span class="o">.</span><span class="n">timetuple</span><span class="p">())</span>
+    <span class="n">t2</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="n">timegm</span><span class="p">(</span><span class="n">dt2</span><span class="o">.</span><span class="n">timetuple</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">t1</span><span class="p">,</span><span class="n">t2</span>
+
+
+<span class="c1"># Step 1: Intialize reddit connection </span>
+<span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span><span class="n">client_id</span><span class="o">=</span><span class="s1">'CLIENT_ID'</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="s2">"CLIENT_SECRET"</span><span class="p">,</span>
+                     <span class="n">password</span><span class="o">=</span><span class="s1">'PASSWORD'</span><span class="p">,</span> <span class="n">user_agent</span><span class="o">=</span><span class="s1">'USERAGENT'</span><span class="p">,</span>
+                     <span class="n">username</span><span class="o">=</span><span class="s1">'USERNAME'</span><span class="p">)</span>
+<span class="c1"># Step 2: define subreddit to capture</span>
+<span class="n">subreddit</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span><span class="s1">'politics'</span><span class="p">)</span>
+
+
+<span class="c1"># Step 3: Select time frame and acquire posts from specified subreddit</span>
+<span class="n">t1</span><span class="p">,</span><span class="n">t2</span> <span class="o">=</span> <span class="n">get_timestamps</span><span class="p">(</span><span class="s1">'01/01/2017'</span><span class="p">,</span> <span class="s1">'12/31/2017'</span><span class="p">)</span>
+<span class="n">submissions</span> <span class="o">=</span> <span class="n">subreddit</span><span class="o">.</span><span class="n">submissions</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">)</span>
+
+<span class="c1"># Step 4: Extract pertinent information from posts</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="n">data</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">subreddit_name_prefixed</span><span class="p">,</span>
+         <span class="n">data</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">ups</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">created_utc</span><span class="p">]</span> <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">submissions</span><span class="p">]</span>
+
+<span class="c1"># Step 5: Place data in pandas dataframe</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span>
+                  <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'id'</span><span class="p">,</span> <span class="s1">'subreddit'</span><span class="p">,</span> <span class="s1">'title'</span><span class="p">,</span> <span class="s1">'ups'</span><span class="p">,</span> <span class="s1">'url'</span><span class="p">,</span> <span class="s1">'created_utc'</span><span class="p">])</span>
+<span class="c1"># Step 6: Save to CSV file</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'data_blog.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="B.-What-is-the-distance-between-each-Zone-1-city-and-me?">B. What is the distance between each Zone 1 city and me?<a class="anchor-link" href="#B.-What-is-the-distance-between-each-Zone-1-city-and-me?">¶</a></h3><p>The next step is for us to determine the distance between me and each city in Zone 1.  In the 'closest_cities'function, we input my location and the city coordinates into geopy's vincenty function to derive the distance in miles.  Next, we append the city's name and distance to a list.</p>
-<p>STOP: USELESS INFO: <a href="https://en.wikipedia.org/wiki/Vincenty%27s_formulae">Vincenty</a> is a highly accurate method for measuring distances, unlike other methods, its accuracy doesn't depend on your location.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [4]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">closest_cities</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lgt</span><span class="p">,</span> <span class="n">zone</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
-    <span class="sd">''' Find cities closest to designated location within a zone</span>
-<span class="sd">    lat: float; latitude</span>
-<span class="sd">    lgt: float; longitude</span>
-<span class="sd">    zone: str; the zone which a city is designated to</span>
-<span class="sd">    num: int, the number of cities that should be designated as closest</span>
-<span class="sd">    '''</span>
-    <span class="n">dist</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">start</span> <span class="o">=</span> <span class="p">(</span><span class="n">lat</span><span class="p">,</span><span class="n">lgt</span><span class="p">)</span>
-    <span class="n">cities</span> <span class="o">=</span> <span class="n">cities_in_zone</span><span class="p">(</span><span class="n">zone</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">cities</span><span class="p">:</span>
-        <span class="n">distance</span> <span class="o">=</span> <span class="n">vincenty</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="p">(</span><span class="n">places</span><span class="p">[</span><span class="n">city</span><span class="p">][</span><span class="s1">'latitude'</span><span class="p">],</span> <span class="n">places</span><span class="p">[</span><span class="n">city</span><span class="p">][</span><span class="s1">'longitude'</span><span class="p">]))</span>
-        <span class="n">dist</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">city</span><span class="p">,</span> <span class="n">distance</span><span class="o">.</span><span class="n">miles</span><span class="p">))</span>
-    <span class="n">final</span> <span class="o">=</span> <span class="n">find_min_distances</span><span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">final</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="C.-Which-two-cities-in-Zone-1-are-closest-to-me?">C. Which two cities in Zone 1 are closest to me?<a class="anchor-link" href="#C.-Which-two-cities-in-Zone-1-are-closest-to-me?">¶</a></h3><p>In the previous function "find_min_distances" was called to find the smallest distance between a city and me. "find_min_distances" takes two arguments.  Firstly, a list of lists containing the city names and their distances from me.  Secondly, an integer that specifies how many cities to return to Company X.</p>
-<p>The output from "find_min_distances" is a dict with the city name as the key and its IP address as a value.  It is returned as a dict simply because Company X wanted the answer as a dict object.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [5]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">find_min_distances</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span> <span class="n">numbers</span><span class="p">):</span>
-    <span class="sd">''' From the calculated geo distances find the smallest</span>
-<span class="sd">    distances: list; list containing city name and distance value in miles</span>
-<span class="sd">    numbers: int; the number of cities to return</span>
-<span class="sd">    return: dict</span>
-<span class="sd">    '''</span>
-    <span class="n">final</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">if</span> <span class="n">numbers</span> <span class="o">></span> <span class="nb">len</span><span class="p">(</span><span class="n">distances</span><span class="p">):</span>
-        <span class="n">numbers</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="nb">min</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">distances</span><span class="p">)],</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-        <span class="n">final</span><span class="p">[</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'IP'</span><span class="p">:</span><span class="n">places</span><span class="p">[</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="s1">'IP'</span><span class="p">]}</span>
-        <span class="n">distances</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">final</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Finally,-which-cities-are-closest-to-Baltimore?">Finally, which cities are closest to Baltimore?<a class="anchor-link" href="#Finally,-which-cities-are-closest-to-Baltimore?">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [6]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">closest_cities</span><span class="p">(</span><span class="mf">39.285879</span><span class="p">,</span> <span class="o">-</span><span class="mf">76.550419</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>{&apos;London&apos;: {&apos;IP&apos;: &apos;208.65.255.10&apos;}, &apos;Madrid&apos;: {&apos;IP&apos;: &apos;208.65.255.10&apos;}}</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now it is your turn!  Can you figure out a better or faster way to answer this question?</p>
 </div>
 </div>
 </div>
@@ -426,19 +312,14 @@ Python 2.7.13 :: Continuum Analytics, Inc
 
   </div>
 
-    <h3>Related content</h3>
-    <!-- TODO: Use fancier related layout, as in https://kevin.deldycke.com/2012/04/beautify-contextual-related-posts-wordpress-plugin/ -->
-    <ul>
-        <li><a href="http://www.igotthegoodstuff.com/elif_statement.html">Explanation of Elif Statement</a></li>
-      </ul>
 
     <div class="comments">
       <div id="disqus_thread"></div>
       <script type="text/javascript">
         var disqus_shortname = 'igotthegoodsuff';
-        var disqus_identifier = "geospatial-distance-distribution-centers.html";
-        var disqus_title = "UpWork Challenge - What server nodes are closest to our customer?";
-        var disqus_url = "http://www.igotthegoodstuff.com/geospatial-distance-distribution-centers.html";
+        var disqus_identifier = "Predicting-Reddit-Upvotes.html";
+        var disqus_title = "Can Machine Learning predict how many upvotes your post will receive? Part 1.";
+        var disqus_url = "http://www.igotthegoodstuff.com/Predicting-Reddit-Upvotes.html";
         (function() {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
           dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
@@ -453,7 +334,7 @@ Python 2.7.13 :: Continuum Analytics, Inc
           <div class="col-md-3">
   <div class="well">
 
-    <p><abbr title="2017-09-22T08:22:00-04:00"><i class="fa fa-calendar"></i> September 22, 2017</abbr></p>
+    <p><abbr title="2018-01-14T16:52:00-05:00"><i class="fa fa-calendar"></i> January 14, 2018</abbr></p>
 
       <p><address>
         <i class="fa fa-user"></i> By
@@ -463,15 +344,18 @@ Python 2.7.13 :: Continuum Analytics, Inc
     <hr/>
 
       <p>
-              <a href="http://www.igotthegoodstuff.com/category/upwork.html" rel="tag"
+              <a href="http://www.igotthegoodstuff.com/category/machine-learning.html" rel="tag"
                   data-toggle="tooltip" class="label label-info"
-                  title="1 article in this category">Upwork</a>
-            <a href="/tag/python.html" data-toggle="tooltip"
+                  title="1 article in this category">Machine Learning</a>
+            <a href="/tag/regression-analysis.html" data-toggle="tooltip"
       class="label label-default"
-      title="2 articles with this tag">python</a>
-            <a href="/tag/geospatial.html" data-toggle="tooltip"
+      title="1 article with this tag">regression-analysis</a>
+            <a href="/tag/reddit.html" data-toggle="tooltip"
       class="label label-default"
-      title="1 article with this tag">geospatial</a>
+      title="1 article with this tag">reddit</a>
+            <a href="/tag/machine-learning.html" data-toggle="tooltip"
+      class="label label-default"
+      title="1 article with this tag">machine-learning</a>
       </p>
       <hr/>
 
@@ -541,7 +425,7 @@ Python 2.7.13 :: Continuum Analytics, Inc
               <h5>Feeds</h5>
               <ul class="list-unstyled">
                   <li><small><a href="http://www.igotthegoodstuff.com/feeds/all.atom.xml"><i class="fa fa-rss"></i> All posts (Atom)</a></small></li>
-                  <li><small><a href="http://www.igotthegoodstuff.com/feeds/upwork.atom.xml"><i class="fa fa-rss"></i> Category: Upwork (Atom)</a></small></li>
+                  <li><small><a href="http://www.igotthegoodstuff.com/feeds/machine-learning.atom.xml"><i class="fa fa-rss"></i> Category: Machine Learning (Atom)</a></small></li>
               </ul>
           </div>
 

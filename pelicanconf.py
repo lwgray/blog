@@ -16,7 +16,7 @@ PYGMENTS_STYLE = 'monokai'
 
 # Plugmage Theme
 THEME = 'themes/plumage'
-SITE_THUMBNAIL = 'images/reggae1.png'
+SITE_THUMBNAIL = '/images/reggae1.png'
 GOOGLE_ANALYTICS = 'UA-106437223-1'
 TIPUE_SEARCH = True
 TEMPLATE_PAGES = {
