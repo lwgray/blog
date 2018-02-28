@@ -22,6 +22,8 @@ TIPUE_SEARCH = True
 TEMPLATE_PAGES = {
     'search.html': 'search.html',
     }
+GITHUB_URL = 'https://github.com/lwgray'
+TWITTER_USERNAME = 'larrygray'
 # END
 
 ROBOTS = 'index, follow'
@@ -48,21 +50,21 @@ HOME_HIDE_TAGS = True
 
 
 # Blogroll
-LINKS = (('Portfolio', 'http://lwgray.github.io'),)
+LINKS = (('Portfolio', 'https://lwgray.github.io'),)
 
 # Social widget
 SOCIAL = (('twitter', 'https://twitter.com/larrygray'),
           ('github', 'https://github.com/lwgray'),
-          ('linkedin', "https://www.linkedin.com/in/lawrence-gray-ph-d-11b6498/"),
+          ('linkedin', "https://www.linkedin.com/in/larry-gray-phd/"),
           ('rss', '//igotthegoodstuff.com/feeds/all.atom.xml'),)
 
 
-MENUITEMS = (('Portfolio', 'http://lwgray.github.io'),
+MENUITEMS = (('Portfolio', 'https://lwgray.github.io'),
              ('Archives', '/archives.html'),
              ('Categories', '/categories.html'),
              ('Tags', '/tags.html'),)
 
-COPYRIGHT_YEAR = 2017
+COPYRIGHT_YEAR = 2018
 
 
 DEFAULT_PAGINATION = 10
@@ -91,7 +93,7 @@ SITEMAP = {
 }
 
 DISQUS_SITENAME = "igotthegoodsuff"
-STATIC_PATHS = ['images', 'extra']
+STATIC_PATHS = ['images', 'extra', 'data', 'scripts']
 USE_LESS = True
 #
 

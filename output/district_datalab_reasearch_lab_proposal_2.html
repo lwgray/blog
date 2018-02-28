@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>  District Data Lab Research Lab Proposal 2
+ | Larry Gray</title>
+
+    <meta name="author" content="Larry Gray"/>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"/>
+    <link rel="stylesheet" href="http://www.igotthegoodstuff.com/theme/css/jquery.mglass.css"/>
+    <link rel="stylesheet" href="http://www.igotthegoodstuff.com/theme/css/pygment-solarized-dark.css"/>
+    <link rel="stylesheet" href="http://www.igotthegoodstuff.com/theme/css/style.css"/>
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'/>
+
+
+    <link rel="icon" href="http://www.igotthegoodstuff.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://www.igotthegoodstuff.com/favicon.ico" type="image/x-icon">
+
+    <!-- Feeds -->
+      <link href="http://www.igotthegoodstuff.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Larry Gray - All posts - Atom Feed"/>
+      <link href="http://www.igotthegoodstuff.com/feeds/machine-learning.atom.xml" type="application/atom+xml" rel="alternate" title="Larry Gray - Category: Machine Learning - Atom Feed"/>
+
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="page-header">
+          <a href="http://www.igotthegoodstuff.com" class="avatar-container pull-left">
+            <div class="avatar ">
+              <div class="side"><img src="/images/reggae1.png" class="img-responsive"/></div>
+            </div>
+          </a>
+        <h1><a href="http://www.igotthegoodstuff.com">Larry Gray</a> <small>Computational Biologist - Data Addict - Pythonista</small></h1>
+      </div>
+
+      <nav class="navbar navbar-default">
+
+        <!-- Hamburger menu for mobile -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#plumage-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://www.igotthegoodstuff.com" title="Computational Biologist - Data Addict - Pythonista">Larry Gray</a>
+        </div>
+
+        <!-- Menus and search forms -->
+        <div class="collapse navbar-collapse" id="plumage-navbar-collapse-1">
+
+          <ul class="nav navbar-nav">
+<li >
+                <a href="https://lwgray.github.io">Portfolio</a>
+              </li>
+<li >
+                <a href="/archives.html">Archives</a>
+              </li>
+<li >
+                <a href="/categories.html">Categories</a>
+              </li>
+<li >
+                <a href="/tags.html">Tags</a>
+              </li>
+<li >
+                  <a href="http://www.igotthegoodstuff.com/pages/about.html">About</a>
+                </li>
+          </ul>
+
+
+            <form class="navbar-form navbar-right" role="search" action="http://www.igotthegoodstuff.com/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" name="q" id="tipue_search_input" class="form-control search-query" placeholder="Search" required />
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="fa
+                        fa-search fa-fw"></i></button>
+                  </span>
+                </div>
+              </div>
+            </form>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+
+    <div class="container main">
+
+
+      <div class="row">
+        <div class=" col-md-9  ">
+  <h1>
+    <a href="http://www.igotthegoodstuff.com/district_datalab_reasearch_lab_proposal_2.html" rel="bookmark" title="Permalink to District Data Lab Research Lab Proposal 2">District Data Lab Research Lab Proposal 2</a>
+  </h1>
+        </div>
+      </div>
+
+      <div class="row">
+
+
+        <div class=" col-md-9 " id="content" role="main">
+  
+
+  <div>
+    <style type="text/css">/*!
+*
+* IPython notebook
+*
+*/.ansibold{font-weight:700}.ansiblack{}.ansired{color:#8b0000}.ansigreen{6400}.ansiyellow{color:#c4a000}.ansiblue{8b}.ansipurple{color:#9400d3}.ansicyan{color:#4682b4}.ansigray{color:gray}.ansibgblack{background-}.ansibgred{background-color:red}.ansibggreen{background-color:green}.ansibgyellow{background-color:#ff0}.ansibgblue{background-f}.ansibgpurple{background-color:#ff00ff}.ansibgcyan{background-ff}.ansibggray{background-color:gray}div.cell{border:1px solid transparent;display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;border-radius:2px;box-sizing:border-box;-moz-box-sizing:border-box;border-width:thin;border-style:solid;width:100%;padding:5px;margin:0;outline:0}div.cell.selected{border-color:#ababab}@media print{div.cell.selected{border-color:transparent}}.edit_mode div.cell.selected{border-color:green}.prompt{min-width:14ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}@-moz-document url-prefix(){div.inner_cell{overflow-x:hidden}}div.input_area{border:1px solid #cfcfcf;border-radius:2px;background:#f7f7f7;line-height:1.21429em}div.prompt:empty{padding-top:0;padding-bottom:0}div.unrecognized_cell{padding:5px 5px 5px 0;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}div.unrecognized_cell .inner_cell{border-radius:2px;padding:5px;font-weight:700;color:red;border:1px solid #cfcfcf;background:#eaeaea}div.unrecognized_cell .inner_cell a,div.unrecognized_cell .inner_cell a:hover{color:inherit;text-decoration:none}@media (max-width:540px){.prompt{text-align:left}div.unrecognized_cell>div.prompt{display:none}}div.code_cell{}div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}@media (max-width:540px){div.input{-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:navy;border-top:1px solid transparent}div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}.CodeMirror{line-height:1.21429em;font-size:14px;height:auto;background:0 0}.CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}.CodeMirror-lines{padding:.4em}.CodeMirror-linenumber{padding:0 8px 0 4px}.CodeMirror-gutters{border-bottom-left-radius:2px;border-top-left-radius:2px}.CodeMirror pre{padding:0;border:0;border-radius:0}.highlight-base,.highlight-variable{}.highlight-variable-2{color:#1a1a1a}.highlight-variable-3{color:#333}.highlight-string{color:#BA2121}.highlight-comment{color:#408080;font-style:italic}.highlight-number{80}.highlight-atom{color:#88F}.highlight-keyword{color:green;font-weight:700}.highlight-builtin{color:green}.highlight-error{color:red}.highlight-operator{color:#A2F;font-weight:700}.highlight-meta{color:#A2F}.highlight-def{f}.highlight-string-2{color:#f50}.highlight-qualifier{color:#555}.highlight-bracket{color:#997}.highlight-tag{color:#170}.highlight-attribute{c}.highlight-header{f}.highlight-quote{90}.highlight-link{c}.cm-s-ipython span.cm-keyword{color:green;font-weight:700}.cm-s-ipython span.cm-atom{color:#88F}.cm-s-ipython span.cm-number{80}.cm-s-ipython span.cm-def{f}.cm-s-ipython span.cm-variable{}.cm-s-ipython span.cm-operator{color:#A2F;font-weight:700}.cm-s-ipython span.cm-variable-2{color:#1a1a1a}.cm-s-ipython span.cm-variable-3{color:#333}.cm-s-ipython span.cm-comment{color:#408080;font-style:italic}.cm-s-ipython span.cm-string{color:#BA2121}.cm-s-ipython span.cm-string-2{color:#f50}.cm-s-ipython span.cm-meta{color:#A2F}.cm-s-ipython span.cm-qualifier{color:#555}.cm-s-ipython span.cm-builtin{color:green}.cm-s-ipython span.cm-bracket{color:#997}.cm-s-ipython span.cm-tag{color:#170}.cm-s-ipython span.cm-attribute{c}.cm-s-ipython span.cm-header{f}.cm-s-ipython span.cm-quote{90}.cm-s-ipython span.cm-link{c}.cm-s-ipython span.cm-error{color:red}.cm-s-ipython span.cm-tab{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=')right no-repeat}div.output_wrapper{display:-webkit-box;-webkit-box-align:stretch;display:-moz-box;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;z-index:1}div.output_scroll{height:24em;width:100%;overflow:auto;border-radius:2px;-webkit-box-shadow:inset 0 2px 8px rgba(0,0,0,.8);box-shadow:inset 0 2px 8px rgba(0,0,0,.8);display:block}div.output_collapsed{margin:0;padding:0;display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}div.out_prompt_overlay{height:100%;padding:0 .4em;position:absolute;border-radius:2px}div.out_prompt_overlay:hover{-webkit-box-shadow:inset 0 0 1px #000;box-shadow:inset 0 0 1px #000;background:rgba(240,240,240,.5)}div.output_prompt{color:#8b0000}div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}div.output_area .MathJax_Display{text-align:left!important}div.output_area div.output_area img,div.output_area svg{max-width:100%;height:auto}div.output_area img.unconfined,div.output_area svg.unconfined{max-width:none}.output{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}@media (max-width:540px){div.output_area{-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;background-color:transparent;border-radius:0}div.output_subarea{overflow-x:auto;padding:.4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1;max-width:calc(100% - 14ex)}div.output_text{text-align:left;line-height:1.21429em}div.output_stderr{background:#fdd}div.output_latex{text-align:left}div.output_javascript:empty{padding:0}.js-error{color:#8b0000}div.raw_input_container{font-family:monospace;padding-top:5px}span.raw_input_prompt{}input.raw_input{font-family:inherit;font-size:inherit;color:inherit;width:auto;vertical-align:baseline;padding:0 .25em;margin:0 .25em}input.raw_input:focus{box-shadow:none}p.p-space{margin-bottom:10px}div.output_unrecognized{padding:5px;font-weight:700;color:red}div.output_unrecognized a,div.output_unrecognized a:hover{color:inherit;text-decoration:none}.rendered_html{}.rendered_html :link,.rendered_html :visited,.rendered_html h1:first-child{margin-top:.538em}.rendered_html h2:first-child{margin-top:.636em}.rendered_html h3:first-child{margin-top:.777em}.rendered_html h4:first-child,.rendered_html h5:first-child,.rendered_html h6:first-child{margin-top:1em}.rendered_html *+ol,.rendered_html *+ul{margin-top:1em}.rendered_html *+table{margin-top:1em}.rendered_html *+p{margin-top:1em}.rendered_html *+img{margin-top:1em}div.text_cell{display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}@media (max-width:540px){div.text_cell>div.prompt{display:none}}div.text_cell_render{outline:0;resize:none;width:inherit;border-style:none;padding:.5em .5em .5em .4em;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}a.anchor-link:link{text-decoration:none;padding:0 20px;visibility:hidden}h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anchor-link,h5:hover .anchor-link,h6:hover .anchor-link{visibility:visible}.text_cell.rendered .input_area{display:none}.text_cell.rendered .text_cell.unrendered .text_cell_render{display:none}.cm-header-1,.cm-header-2,.cm-header-3,.cm-header-4,.cm-header-5,.cm-header-6{font-weight:700;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.cm-header-1{font-size:185.7%}.cm-header-2{font-size:157.1%}.cm-header-3{font-size:128.6%}.cm-header-4{font-size:110%}.cm-header-5,.cm-header-6{font-size:100%;font-style:italic}</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Proposal-#1-Horse-racing-dataset.">Proposal #1 Horse racing dataset.<a class="anchor-link" href="#Proposal-#1-Horse-racing-dataset.">¶</a></h3><p>The dataset is derieved from tips that tipsters provided to bettors.<br>
+Tipsters are people that give bettors their best guess aka tip on how to place a bet on a horse race.<br>
+This dataset could be used to predict horse races.</br></br></p>
+<h5 id="Topic:">Topic:<a class="anchor-link" href="#Topic:">¶</a></h5><p>Interesting Dataset;</p>
+<h5 id="Proposal/Yellowbrick:">Proposal/Yellowbrick:<a class="anchor-link" href="#Proposal/Yellowbrick:">¶</a></h5><p>Classification tutorial with an unbalanced data set</p>
+<h5 id="Notes:">Notes:<a class="anchor-link" href="#Notes:">¶</a></h5><p>This dataset is unbalanced.  Given that horse racing is a game of chance, you would expect an unbalanced target.</p>
+<h4 id="Other:">Other:<a class="anchor-link" href="#Other:">¶</a></h4><ol>
+<li>Consists of 380k tips</li>
+<li>Current features include odds, track, bet-type, horse name, and result</li>
+<li>Other features could be added to put together a successful machine learning model such as tempature, humidty, and precipitation.</li>
+</ol>
+<p><img alt="" src="images/horse1.png" /></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">yellowbrick.classifier.class_balance</span> <span class="kn">import</span> <span class="n">ClassBalance</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span><span class="p">,</span> <span class="n">OneHotEncoder</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Track'</span><span class="p">,</span> <span class="s1">'Horse'</span><span class="p">,</span> <span class="s1">'Bet Type'</span><span class="p">,</span> <span class="s1">'Odds'</span><span class="p">,</span> <span class="s1">'Result'</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"https://query.data.world/s/hGxcDSVClhoNX6KacQMHnFVNbHy9Zg"</span><span class="p">,</span>
+                   <span class="n">encoding</span><span class="o">=</span><span class="s1">'latin-1'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="n">features</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(38248, 10)
+</pre>
+</div>
+</div>
+<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Track</th>
+<th>Horse</th>
+<th>Bet Type</th>
+<th>Odds</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>Ascot</td>
+<td>Fredricka</td>
+<td>Win</td>
+<td>8.00</td>
+<td>Lose</td>
+</tr>
+<tr>
+<th>1</th>
+<td>Thirsk</td>
+<td>Spend A Penny</td>
+<td>Win</td>
+<td>4.50</td>
+<td>Lose</td>
+</tr>
+<tr>
+<th>2</th>
+<td>York</td>
+<td>Straightothepoint</td>
+<td>Win</td>
+<td>7.00</td>
+<td>Lose</td>
+</tr>
+<tr>
+<th>3</th>
+<td>Newmarket</td>
+<td>Miss Inga Sock</td>
+<td>Win</td>
+<td>5.00</td>
+<td>Lose</td>
+</tr>
+<tr>
+<th>4</th>
+<td>Ascot</td>
+<td>Peril</td>
+<td>Win</td>
+<td>4.33</td>
+<td>Win</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create training and test sets</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Odds</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Result</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+                                                    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">classes</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Result</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Use Yellowbrick Visualizer ClassBalance</span>
+<span class="n">forest</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">()</span>
+<span class="n">visualizer</span> <span class="o">=</span> <span class="n">ClassBalance</span><span class="p">(</span><span class="n">forest</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="n">classes</span><span class="p">)</span>
+
+<span class="n">visualizer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>  <span class="c1"># Fit the training data to the visualizer</span>
+<span class="n">visualizer</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>  <span class="c1"># Evaluate the model on the test data</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">visualizer</span><span class="o">.</span><span class="n">poof</span><span class="p">()</span>   
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAekAAAFXCAYAAACGDraSAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+AAALEgAACxIB0t1+/AAAIABJREFUeJzt3X18VNWB//HvZPKAJME03ZaWKq4pBEsxYhLSjQlBrDVs
+BaQIJqARXiIoBWpQahBJAkIJT2ZBsgLVbqspERbU2q772nVFIA1xCR2NkLACFeX5SaNIhpCne35/
+uJlfI0kmuAk54Of9evXV5s6Ze88dmPlwT5JblzHGCAAAWCegqycAAABaRqQBALAUkQYAwFJEGgAA
+SxFpAAAsRaQBALBUYFdPAFeWxsZGvfjii/rTn/6kxsZG1dfXa+jQoXrkkUcUHBys2bNnq2/fvpo0
+aVKnzeG2225TUFCQunXrJsdx5DiO7r//fqWlpbX5vFdeeUX/+Z//qbVr13ba3NrS2Nio6dOn68CB
+A8rIyNB99933lfaTkZGho0ePKjw8XJLkOI7q6uo0depUjRo1qkPmWlVVpcTERO3du7dD9rdq1Sqt
+W7dOPXv2bLZ94cKFuvHGGzvkGK2ZO3eu0tPTNWDAAEnSBx98oBUrVuijjz6Sy+VSjx49lJmZqfj4
+eB05ckQjRozQu+++26FzmDx5srKystSnTx/l5ubqz3/+s0aMGKE9e/b4tuPriUijQ82bN09nzpzR
+Cy+8oPDwcJ07d06zZs3Sk08+qWXLll2yeSxfvtz34X78+HGlpqYqJSVF3/3udy/ZHC7WyZMnVVJS
+ovLycrnd7v/Tvh5//HENGzbM9/Xu3bs1btw43X777QoLC/u/TrVT/PSnP1VOTs4lP25paanvH3AH
+DhzQhAkTlJeXp8GDB0uS3n77bT388MN66aWXdNVVV3XKHJ577jnf/96wYYO2bt2q73znO51yLFxe
+iDQ6zOHDh/WnP/1JJSUlvhB0795d8+fPb/HKY9OmTdqwYYPq6+t15swZTZ48WePHj9fp06eVlZWl
+Tz/9VJI0ZMgQZWZmtrrdnzNnzuiqq65S9+7d2zzu3yovL9eyZctUV1en06dP65ZbbtGiRYt05MgR
+TZw4UUOGDNF7772nM2fO6PHHH9dPfvITNTQ0aNmyZdq6davcbrduvvlm5ebmKjg4WKtXr9Ybb7wh
+x3H0ve99T7m5uc2uGqurq/Xggw+qoaFBo0eP1qpVq3Tq1CktXbpUNTU1CgoKUmZmplJSUvTKK69o
+06ZNqqmpUVhYmAoLC9v1Z9O9e3cFBwfLcRwtWrRI7733nrxer4wxWrhwoeLi4jR79myFhYVp7969
+OnHihPr166clS5YoNDRUb7zxhv7pn/5JV111le+qs8k///M/6/XXX5fb7db111+v7Oxsfetb31JG
+RoZ++MMfqry8XFVVVbrnnnv08ccfq6ysTDU1NVqxYoX69evX5tzr6+u1ePFivf3223K73YqJidET
+TzyhsLAw3XbbbYqJidHevXv16KOPKiYmRk899ZSOHz+u+vp63XnnnXr44YfV0NCgBQsW6J133lFQ
+UJCuueYa5eXl6de//rVOnTqlWbNmaenSpVq/fr3uvvtuX6AlKTExUU8//bS6devWbF4ff/yxcnJy
+9Mknn+j06dP63ve+pxUrVuib3/ymioqKtH79egUFBSkkJERPPfWU+vTp0+r22267TStXrlReXp6M
+MZo8ebJyc3P1+OOPa+XKlbrxxhv11ltvafXq1aqvr1e3bt2UlZWlm2++WatWrVJ5eblOnTqlfv36
+afny5X7/PuAyYoAO8h//8R/m7rvvbnNMVlaWef755011dbW55557TFVVlTHGmHfffdcMHDjQGGNM
+QUGByc7ONsYY4/V6TWZmpvn8889b3f5lQ4cONXfccYcZOXKkSU1NNTfccIPJz883xpg2j/vyyy+b
+KVOmGGOMmTlzpvnv//5v33N+9KMfmd27d5vDhw+b6Oho89Zbb/nO+dZbbzXGGPPCCy+Ye++919TU
+1JjGxkbzyCOPmFdffdW8+uqrJjMz09TX1xtjjFm/fr158MEHL5j34cOHfXOpqqoyiYmJpry83Bhj
+zL59+0xCQoI5dOiQefnll82gQYPM2bNnW3yN77vvPjN06FAzcuRIc+utt5rExEQzc+ZMU1lZaYwx
+5p133jEzZswwjY2Nxhhj1q5dax566CHfn09aWpqpra01dXV1ZtSoUWbTpk3m9OnTJi4uzuzfv98Y
+Y8yaNWtMdHS0McaYTZs2mbS0NOP1eo0xxjzzzDPmgQce8M1l+vTpxhhjysvLTXR0tNm8ebMxxphf
+/epXZu7cub7n/OhHPzIjR470/WfVqlXGGGNWrlxppk+fburq6kxjY6OZPXu27+/B0KFDTUFBge/c
+MzIyfPs/f/68ycjIMK+//rrZuXOnGTZsmHEcxxhjzNKlS43H4/HtY9euXcYYY4YPH262bt3a4uv6
+5T+j3/3ud2bt2rXGGGMcxzEPPvig+c1vfmMaGhrMD3/4Q3Py5EljjDGvvvqqWb9+favbvzyH6Oho
+88knnzTb/uGHH5rhw4f7/t7u27fPJCUlGa/Xa5555hmTmprq+/uFKwtX0ugwAQEBchynXWNDQ0O1
+Zs0abdu2TR999JHef/99nTt3TpI0ePBgTZkyRcePH9ctt9yixx57TOHh4a1ub8nfLncfPnxYEydO
+VN++fTV8+PBWj/u3Fi9erOLiYq1Zs0YHDhzQ+fPnde7cOUVERCgoKEhDhgyRJPXv31+fffaZpC+W
+Te+66y7fFdeKFSskSY888oh2796tu+++W9IX3yOuqalp8/XZtWuXevfurZtuukmS1LdvX8XGxqqs
+rEwul0v9+vVrc9m6abm7qqpKkydPVs+ePdW/f39J0s0336yrr75a69ev1+HDh7Vjxw6Fhob6njt4
+8GAFBwdLkqKjo3XmzBl5PB5FR0f7vjealpam/Px8SVJxcbFGjx7tW6m4//77tWbNGtXV1UmSfvKT
+n0iSrr32Wt/+Jal3794qKyvzHbe15e7i4mLNnDlTQUFBkr74nvu0adN8j8fHx0uSzp07p507d+rM
+mTNauXKlb9v777+v5ORkud1ujR07VsnJyUpNTVVMTMwFx3K5XO3+OzxhwgT95S9/0W9/+1t99NFH
+2r9/v2666Sa53W4NGzZM6enpuvXWW5WUlKQRI0a0ur09tm/frlOnTmnixInN5nro0CFJ0sCBAxUY
+yMf5lYif7kaHiYmJ0YEDB1RdXd1s+8mTJzVlyhSdP3/et+3EiRMaNWqUjh49qri4uGbL1jExMdq8
+ebPS0tJ09OhRjR07VhUVFa1u9+faa6/Vbbfdpp07d7Z53L917733atu2bYqKitK0adPUs2dPmf+9
+zX1QUJACAr5467hcLt9zvvwh+fHHH+vUqVNyHEcPPvigXnvtNb322mt6+eWX9dJLL7U555ZCYYxR
+Q0ODJPmC6E9kZKRWrFihoqIivfHGG5KkrVu36qGHHpIk/fjHP9a4ceOaPedvl3VdLpeMMb7/bulc
+zZdu/+84jm+eknzBb9IU2/b68mvhOI7q6+t9Xze9Fo7jyBij9evX+17rDRs26KGHHlKPHj302muv
+KSsrS263W5mZmVq3bt0Fxxo4cKDKy8sv2F5QUKA//vGPzbYtW7ZMK1eu1De+8Q2lpaUpKSnJ91os
+X75ca9asUe/evfXcc8/p0UcfbXN7e16DxMRE33m99tpr+td//Vf17du32WuAKw+RRofp2bOnRowY
+oTlz5vhCXV1drXnz5ikiIqLZh39FRYUiIyP185//XMnJydqyZYukL37Cefny5Xr22Wd1++2368kn
+n1SfPn20f//+Vrf703SFFRMT0+Zxm5w5c0YVFRWaNWuW7rjjDp04cUKHDh3ye4WVmJiof/u3f1Nd
+XZ0cx9G8efP0+uuvKzk5WZs2bfK9JitXrtTjjz/e5r5uuukmffjhh9q1a5ckaf/+/dq5c6cSEhL8
+nu+XXXvttXr44Ye1cOFCnTt3Ttu3b9fQoUM1fvx4DRgwQG+++Waz829JfHy8/vrXv+r999+X9MVP
+wjdJTk7WK6+84luRKCws1KBBgy6I81c1ePBgrV+/XvX19XIcR+vWrVNSUtIF48LCwjRw4ED99re/
+lSR9/vnnGjdunDZv3qwtW7Zo4sSJuvnmmzVjxgyNGjXK9w88t9vt+0fFpEmTtHHjRpWUlPj2W1xc
+rMLCQt1www3NjldSUqIJEyZo1KhR+uY3v6nS0lI1NjaqqqpKQ4YMUUREhCZOnKjMzEzt3r271e3t
+8Q//8A/avn27PvjgA0nStm3bNHLkSNXW1l78C4rLCusj6FC5ubl69tlnlZ6eLrfbrbq6Ot1+++2a
+MWNGs3FJSUnatGmThg0bJpfLpYSEBEVGRurgwYOaMGGCZs+ereHDhys4OFj9+vXTnXfeqTNnzrS4
+vSWzZs1St27d5HK5VFNTo3/8x3/U3XffrZqamlaP2+Tqq6/WlClT9LOf/Uzdu3dXz549FRsbq4MH
+D/qWbFuSnp6uo0ePavTo0TLGKCEhQRkZGQoICNDJkyd1zz33yOVy6bvf/a4WL17c5usYGRmplStX
+asGCBTp//rxcLpfy8vJ0/fXXf6Vf/5k0aZL+8Ic/+P5sZs2apREjRqihoUFJSUm+H2praz7Lly/X
+rFmzFBQUpEGDBvkeGzNmjI4fP66xY8fKcRxdd911HfrDS1OnTtWSJUs0atQoNTQ0KCYmRtnZ2S2O
+Xb58uRYsWKARI0aorq5Ow4cP18iRI9XY2Kji4mINHz5c3bt319VXX60FCxZI+mI5/pe//KXmzZun
+5ORkrVmzRitWrNCSJUvkOI4iIyO1evVqRUdH68iRI75jTZs2TUuXLtXKlSsVFBSk2NhYHTp0SJGR
+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
+MWPGKD09Xbt27ZKkVscCAAD//Ea6vr5eOTk56tatmyQpLy9PmZmZKioqkjFGmzdvVmVlpcrKyrRx
+40bl5+dr/vz5rY4FAADt4zfSS5YsUXp6ur797W9LkiorK5WQkCBJSklJUWlpqTwej5KTk+VyudSr
+Vy81NjaqqqqqxbEAAKB9Att68JVXXlFkZKQGDx6sX//615IkY4xcLpckKTQ0VGfPnlV1dbUiIiJ8
+z2va3tLY9qioqPhKJwNcLI/H09VTAC4bvF8uvTYj/fLLL8vlcuntt9/W//zP/ygrK0tVVVW+x71e
+r3r06KGwsDB5vd5m28PDwxUQEHDB2PYYMGCAQkJCLvZcWle0p+P2hStKXFxcV08BuCx4PB7eL52k
+tra21YvTNpe7161bp9///vcqLCzUD37wAy1ZskQpKSnasWOHJKm4uFjx8fGKjY1VSUmJHMfRsWPH
+5DiOIiMj1b9//wvGAgCA9mnzSrolWVlZys7OVn5+vqKiopSamiq32634+HilpaXJcRzl5OS0OhYA
+ALSPyxhjunoSTZou+Tt6udv9WGGH7QtXlsanM7p6CsBlgeXuztNW+7iZCQAAliLSAABYikgDAGAp
+Ig0AgKWINAAAliLSAABYikgDAGApIg0AgKWINAAAliLSAABYikgDAGApIg0AgKWINAAAliLSAABY
+ikgDAGApIg0AgKWINAAAliLSAABYikgDAGApIg0AgKWINAAAliLSAABYikgDAGApIg0AgKWINAAA
+liLSAABYikgDAGApIg0AgKWINAAAliLSAABYikgDAGApIg0AgKWINAAAliLSAABYikgDAGApIg0A
+gKWINAAAlgr0N6CxsVFz587Vhx9+KLfbrby8PBljNHv2bLlcLvXt21e5ubkKCAhQQUGBtm7dqsDA
+QM2ZM0cxMTE6ePBgi2MBAEDb/NZyy5YtkqT169frF7/4hfLy8pSXl6fMzEwVFRXJGKPNmzersrJS
+ZWVl2rhxo/Lz8zV//nxJanEsAADwz2+kb7/9di1YsECSdOzYMf3d3/2dKisrlZCQIElKSUlRaWmp
+PB6PkpOT5XK51KtXLzU2NqqqqqrFsQAAwD+/y92SFBgYqKysLP3Xf/2XnnnmGW3ZskUul0uSFBoa
+qrNnz6q6uloRERG+5zRtN8ZcMNafioqKr3IuwEXzeDxdPQXgssH75dJrV6QlacmSJZo1a5buuece
+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
+AAAASUVORK5CYII=
+">
+</img></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+  </div>
+
+    <h3>Related content</h3>
+    <!-- TODO: Use fancier related layout, as in https://kevin.deldycke.com/2012/04/beautify-contextual-related-posts-wordpress-plugin/ -->
+    <ul>
+        <li><a href="http://www.igotthegoodstuff.com/district_datalab_reasearch_lab_proposal_1.html">District Data Lab Research Lab Proposal 1</a></li>
+        <li><a href="http://www.igotthegoodstuff.com/Calzone_feature_analysis.html">Calzone Feature Analysis</a></li>
+        <li><a href="http://www.igotthegoodstuff.com/Predicting-Reddit-Upvotes.html">Can Machine Learning predict how many upvotes your post will receive? Part 1.</a></li>
+        <li><a href="http://www.igotthegoodstuff.com/Calzone_model_evaluation.html">Calzone Model Evaluation</a></li>
+        <li><a href="http://www.igotthegoodstuff.com/Calzone_hyperparameter_optomization.html">Calzone hyperparameter optomization</a></li>
+      </ul>
+
+    <div class="comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'igotthegoodsuff';
+        var disqus_identifier = "district_datalab_reasearch_lab_proposal_2.html";
+        var disqus_title = "District Data Lab Research Lab Proposal 2";
+        var disqus_url = "http://www.igotthegoodstuff.com/district_datalab_reasearch_lab_proposal_2.html";
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus</a>.</noscript>
+    </div>
+
+        </div>
+
+          <div class="col-md-3">
+  <div class="well">
+
+    <p><abbr title="2018-02-27T21:16:00-05:00"><i class="fa fa-calendar"></i> February 27, 2018</abbr></p>
+
+      <p><address>
+        <i class="fa fa-user"></i> By
+          <a href="http://www.igotthegoodstuff.com/author/larry-gray.html" rel="author">Larry Gray</a>
+      </address></p>
+
+    <hr/>
+
+      <p>
+              <a href="http://www.igotthegoodstuff.com/category/machine-learning.html" rel="tag"
+                  data-toggle="tooltip" class="label label-info"
+                  title="8 articles in this category">Machine Learning</a>
+            <a href="/tag/machine-learning.html" data-toggle="tooltip"
+      class="label label-default"
+      title="8 articles with this tag">machine-learning</a>
+            <a href="/tag/proposals.html" data-toggle="tooltip"
+      class="label label-default"
+      title="2 articles with this tag">proposals</a>
+            <a href="/tag/ddl.html" data-toggle="tooltip"
+      class="label label-default"
+      title="2 articles with this tag">ddl</a>
+      </p>
+      <hr/>
+
+
+
+  </div>
+            
+          </div>
+
+      </div>
+
+    </div>
+
+    <!-- TODO: make footer sticky -->
+    <footer class="container-fluid">
+      <div class="container">
+        <div class="row">
+
+            <div class="col-md-2">
+                <h5>Social</h5>
+                <ul class="list-unstyled">
+                  <li>  <a href="https://twitter.com/larrygray">
+      <i class="fa fa-twitter"></i>
+    twitter
+  </a></li>
+                  <li>  <a href="https://github.com/lwgray">
+      <i class="fa fa-github"></i>
+    github
+  </a></li>
+                  <li>  <a href="https://www.linkedin.com/in/larry-gray-phd/">
+      <img src="https://icons.better-idea.org/icon?url=www.linkedin.com&size=16" width="16" height="16" class="icon" alt="www.linkedin.com icon"/>
+    linkedin
+  </a></li>
+                  <li>  <a href="//igotthegoodstuff.com/feeds/all.atom.xml">
+      <i class="fa fa-external-link"></i>
+    rss
+  </a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                  <li>  <a href="https://lwgray.github.io">
+      <img src="https://icons.better-idea.org/icon?url=lwgray.github.io&size=16" width="16" height="16" class="icon" alt="lwgray.github.io icon"/>
+    Portfolio
+  </a></li>
+                </ul>
+            </div>
+
+          <div class="col-md-2">
+            <h5>Browse content by</h5>
+            <ul class="list-unstyled">
+            </ul>
+          </div>
+
+          <div class="col-md-2 text-muted">
+            <h5>Copyright notice</h5>
+            <p>© Copyright 2017-2018 Larry Gray.</p>
+          </div>
+
+          <div class="col-md-2 text-muted">
+            <h5>Disclaimer</h5>
+              <p>All opinions expressed in this site are my own personal opinions and are not endorsed by, nor do they represent the opinions of my previous, current and future employers or any of its affiliates, partners or customers.</p>
+          </div>
+
+          <div class="col-md-2">
+              <h5>Feeds</h5>
+              <ul class="list-unstyled">
+                  <li><small><a href="http://www.igotthegoodstuff.com/feeds/all.atom.xml"><i class="fa fa-rss"></i> All posts (Atom)</a></small></li>
+                  <li><small><a href="http://www.igotthegoodstuff.com/feeds/machine-learning.atom.xml"><i class="fa fa-rss"></i> Category: Machine Learning (Atom)</a></small></li>
+              </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <h5 class="text-right"><a href="#"><i class="fa fa-arrow-up"></i> Back to top</a></h5>
+
+      <div class="container">
+        <div class="row col-md-12 text-muted text-center">
+          Site generated by <a href="https://getpelican.com"> Pelican</a>.<br/>
+          <a href="https://github.com/kdeldycke/plumage"> Plumage</a> theme by <a href="https://kevin.deldycke.com">Kevin Deldycke</a>.
+        </div>
+      </div>
+
+    </footer>
+
+    <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-106437223-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+    <script src="http://www.igotthegoodstuff.com/theme/js/jquery.mglass.js"></script>
+    <script src="http://www.igotthegoodstuff.com/theme/js/application.js"></script>
+
+  </body>
+</html>

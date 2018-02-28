@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>  Test
+ | Larry Gray</title>
+
+    <meta name="author" content="Larry Gray"/>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"/>
+    <link rel="stylesheet" href="http://www.igotthegoodstuff.com/theme/css/jquery.mglass.css"/>
+    <link rel="stylesheet" href="http://www.igotthegoodstuff.com/theme/css/pygment-solarized-dark.css"/>
+    <link rel="stylesheet" href="http://www.igotthegoodstuff.com/theme/css/style.css"/>
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'/>
+
+
+    <link rel="icon" href="http://www.igotthegoodstuff.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://www.igotthegoodstuff.com/favicon.ico" type="image/x-icon">
+
+    <!-- Feeds -->
+      <link href="http://www.igotthegoodstuff.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Larry Gray - All posts - Atom Feed"/>
+      <link href="http://www.igotthegoodstuff.com/feeds/machine-learning.atom.xml" type="application/atom+xml" rel="alternate" title="Larry Gray - Category: Machine Learning - Atom Feed"/>
+
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="page-header">
+          <a href="http://www.igotthegoodstuff.com" class="avatar-container pull-left">
+            <div class="avatar ">
+              <div class="side"><img src="/images/reggae1.png" class="img-responsive"/></div>
+            </div>
+          </a>
+        <h1><a href="http://www.igotthegoodstuff.com">Larry Gray</a> <small>Computational Biologist - Data Addict - Pythonista</small></h1>
+      </div>
+
+      <nav class="navbar navbar-default">
+
+        <!-- Hamburger menu for mobile -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#plumage-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://www.igotthegoodstuff.com" title="Computational Biologist - Data Addict - Pythonista">Larry Gray</a>
+        </div>
+
+        <!-- Menus and search forms -->
+        <div class="collapse navbar-collapse" id="plumage-navbar-collapse-1">
+
+          <ul class="nav navbar-nav">
+<li >
+                <a href="https://lwgray.github.io">Portfolio</a>
+              </li>
+<li >
+                <a href="/archives.html">Archives</a>
+              </li>
+<li >
+                <a href="/categories.html">Categories</a>
+              </li>
+<li >
+                <a href="/tags.html">Tags</a>
+              </li>
+<li >
+                  <a href="http://www.igotthegoodstuff.com/pages/about.html">About</a>
+                </li>
+          </ul>
+
+
+            <form class="navbar-form navbar-right" role="search" action="http://www.igotthegoodstuff.com/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" name="q" id="tipue_search_input" class="form-control search-query" placeholder="Search" required />
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="fa
+                        fa-search fa-fw"></i></button>
+                  </span>
+                </div>
+              </div>
+            </form>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+
+    <div class="container main">
+
+
+      <div class="row">
+        <div class=" col-md-9  ">
+  <h1>
+    <a href="http://www.igotthegoodstuff.com/drafts/Test.html" rel="bookmark" title="Permalink to Test">Test</a>
+  </h1>
+        </div>
+      </div>
+
+      <div class="row">
+
+
+        <div class=" col-md-9 " id="content" role="main">
+  
+
+  <div>
+    <style type="text/css">/*!
+*
+* IPython notebook
+*
+*/.ansibold{font-weight:700}.ansiblack{}.ansired{color:#8b0000}.ansigreen{6400}.ansiyellow{color:#c4a000}.ansiblue{8b}.ansipurple{color:#9400d3}.ansicyan{color:#4682b4}.ansigray{color:gray}.ansibgblack{background-}.ansibgred{background-color:red}.ansibggreen{background-color:green}.ansibgyellow{background-color:#ff0}.ansibgblue{background-f}.ansibgpurple{background-color:#ff00ff}.ansibgcyan{background-ff}.ansibggray{background-color:gray}div.cell{border:1px solid transparent;display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;border-radius:2px;box-sizing:border-box;-moz-box-sizing:border-box;border-width:thin;border-style:solid;width:100%;padding:5px;margin:0;outline:0}div.cell.selected{border-color:#ababab}@media print{div.cell.selected{border-color:transparent}}.edit_mode div.cell.selected{border-color:green}.prompt{min-width:14ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}@-moz-document url-prefix(){div.inner_cell{overflow-x:hidden}}div.input_area{border:1px solid #cfcfcf;border-radius:2px;background:#f7f7f7;line-height:1.21429em}div.prompt:empty{padding-top:0;padding-bottom:0}div.unrecognized_cell{padding:5px 5px 5px 0;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}div.unrecognized_cell .inner_cell{border-radius:2px;padding:5px;font-weight:700;color:red;border:1px solid #cfcfcf;background:#eaeaea}div.unrecognized_cell .inner_cell a,div.unrecognized_cell .inner_cell a:hover{color:inherit;text-decoration:none}@media (max-width:540px){.prompt{text-align:left}div.unrecognized_cell>div.prompt{display:none}}div.code_cell{}div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}@media (max-width:540px){div.input{-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:navy;border-top:1px solid transparent}div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}.CodeMirror{line-height:1.21429em;font-size:14px;height:auto;background:0 0}.CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}.CodeMirror-lines{padding:.4em}.CodeMirror-linenumber{padding:0 8px 0 4px}.CodeMirror-gutters{border-bottom-left-radius:2px;border-top-left-radius:2px}.CodeMirror pre{padding:0;border:0;border-radius:0}.highlight-base,.highlight-variable{}.highlight-variable-2{color:#1a1a1a}.highlight-variable-3{color:#333}.highlight-string{color:#BA2121}.highlight-comment{color:#408080;font-style:italic}.highlight-number{80}.highlight-atom{color:#88F}.highlight-keyword{color:green;font-weight:700}.highlight-builtin{color:green}.highlight-error{color:red}.highlight-operator{color:#A2F;font-weight:700}.highlight-meta{color:#A2F}.highlight-def{f}.highlight-string-2{color:#f50}.highlight-qualifier{color:#555}.highlight-bracket{color:#997}.highlight-tag{color:#170}.highlight-attribute{c}.highlight-header{f}.highlight-quote{90}.highlight-link{c}.cm-s-ipython span.cm-keyword{color:green;font-weight:700}.cm-s-ipython span.cm-atom{color:#88F}.cm-s-ipython span.cm-number{80}.cm-s-ipython span.cm-def{f}.cm-s-ipython span.cm-variable{}.cm-s-ipython span.cm-operator{color:#A2F;font-weight:700}.cm-s-ipython span.cm-variable-2{color:#1a1a1a}.cm-s-ipython span.cm-variable-3{color:#333}.cm-s-ipython span.cm-comment{color:#408080;font-style:italic}.cm-s-ipython span.cm-string{color:#BA2121}.cm-s-ipython span.cm-string-2{color:#f50}.cm-s-ipython span.cm-meta{color:#A2F}.cm-s-ipython span.cm-qualifier{color:#555}.cm-s-ipython span.cm-builtin{color:green}.cm-s-ipython span.cm-bracket{color:#997}.cm-s-ipython span.cm-tag{color:#170}.cm-s-ipython span.cm-attribute{c}.cm-s-ipython span.cm-header{f}.cm-s-ipython span.cm-quote{90}.cm-s-ipython span.cm-link{c}.cm-s-ipython span.cm-error{color:red}.cm-s-ipython span.cm-tab{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=')right no-repeat}div.output_wrapper{display:-webkit-box;-webkit-box-align:stretch;display:-moz-box;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;z-index:1}div.output_scroll{height:24em;width:100%;overflow:auto;border-radius:2px;-webkit-box-shadow:inset 0 2px 8px rgba(0,0,0,.8);box-shadow:inset 0 2px 8px rgba(0,0,0,.8);display:block}div.output_collapsed{margin:0;padding:0;display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}div.out_prompt_overlay{height:100%;padding:0 .4em;position:absolute;border-radius:2px}div.out_prompt_overlay:hover{-webkit-box-shadow:inset 0 0 1px #000;box-shadow:inset 0 0 1px #000;background:rgba(240,240,240,.5)}div.output_prompt{color:#8b0000}div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}div.output_area .MathJax_Display{text-align:left!important}div.output_area div.output_area img,div.output_area svg{max-width:100%;height:auto}div.output_area img.unconfined,div.output_area svg.unconfined{max-width:none}.output{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}@media (max-width:540px){div.output_area{-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;background-color:transparent;border-radius:0}div.output_subarea{overflow-x:auto;padding:.4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1;max-width:calc(100% - 14ex)}div.output_text{text-align:left;line-height:1.21429em}div.output_stderr{background:#fdd}div.output_latex{text-align:left}div.output_javascript:empty{padding:0}.js-error{color:#8b0000}div.raw_input_container{font-family:monospace;padding-top:5px}span.raw_input_prompt{}input.raw_input{font-family:inherit;font-size:inherit;color:inherit;width:auto;vertical-align:baseline;padding:0 .25em;margin:0 .25em}input.raw_input:focus{box-shadow:none}p.p-space{margin-bottom:10px}div.output_unrecognized{padding:5px;font-weight:700;color:red}div.output_unrecognized a,div.output_unrecognized a:hover{color:inherit;text-decoration:none}.rendered_html{}.rendered_html :link,.rendered_html :visited,.rendered_html h1:first-child{margin-top:.538em}.rendered_html h2:first-child{margin-top:.636em}.rendered_html h3:first-child{margin-top:.777em}.rendered_html h4:first-child,.rendered_html h5:first-child,.rendered_html h6:first-child{margin-top:1em}.rendered_html *+ol,.rendered_html *+ul{margin-top:1em}.rendered_html *+table{margin-top:1em}.rendered_html *+p{margin-top:1em}.rendered_html *+img{margin-top:1em}div.text_cell{display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}@media (max-width:540px){div.text_cell>div.prompt{display:none}}div.text_cell_render{outline:0;resize:none;width:inherit;border-style:none;padding:.5em .5em .5em .4em;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}a.anchor-link:link{text-decoration:none;padding:0 20px;visibility:hidden}h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anchor-link,h5:hover .anchor-link,h6:hover .anchor-link{visibility:visible}.text_cell.rendered .input_area{display:none}.text_cell.rendered .text_cell.unrendered .text_cell_render{display:none}.cm-header-1,.cm-header-2,.cm-header-3,.cm-header-4,.cm-header-5,.cm-header-6{font-weight:700;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.cm-header-1{font-size:185.7%}.cm-header-2{font-size:157.1%}.cm-header-3{font-size:128.6%}.cm-header-4{font-size:110%}.cm-header-5,.cm-header-6{font-size:100%;font-style:italic}</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="A-tutorial-on-my-machine-learning-workflow-for-predicting-whether-or-not-this-post-will-be-popular!">A tutorial on my machine-learning workflow for predicting whether or not this post will be popular!<a class="anchor-link" href="#A-tutorial-on-my-machine-learning-workflow-for-predicting-whether-or-not-this-post-will-be-popular!">¶</a></h3><p>The purpose of the notebook is to describe my efforts to predict whether or not a post to the /r/datascience subreddit will be a success.  I define success as receiving more than the average number of votes.  What's unique about my methodology is that the prediction is based solely on the title of the redditor's post.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Caveats">Caveats<a class="anchor-link" href="#Caveats">¶</a></h4><p>Yes, I do know that day and time are powerful predictors of votes(likes,retweets) but I didn't want to confine/limit my prediction to these temporal parameters.  I am also aware that the predictive power of this model is barely good thus suggested improvements woul be greatly appreciated.  I must remind you that this is my first dive into NLP and I might have made careless mistakes and overlooked obvious problems or solutions. Please be kind in your criticism.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1">#%matplotlib inline</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="k">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">f1_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">cross_val_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="k">import</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">FeatureUnion</span>
+<span class="kn">from</span> <span class="nn">feature_extraction</span> <span class="k">import</span> <span class="n">Blob</span><span class="p">,</span> <span class="n">Words</span><span class="p">,</span> <span class="n">Exclude</span><span class="p">,</span> <span class="n">WordCount</span><span class="p">,</span> <span class="n">POS</span><span class="p">,</span> <span class="n">Readable</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="k">import</span> <span class="n">MultinomialNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="k">import</span> <span class="n">SelectPercentile</span><span class="p">,</span> <span class="n">f_classif</span><span class="p">,</span> <span class="n">SelectFromModel</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">MinMaxScaler</span><span class="p">,</span> <span class="n">Normalizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="k">import</span> <span class="n">TruncatedSVD</span>
+<span class="kn">from</span> <span class="nn">sklearn.externals</span> <span class="k">import</span> <span class="n">joblib</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">ExtraTreesClassifier</span><span class="p">,</span> <span class="n">RandomForestClassifier</span>
+
+<span class="kn">from</span> <span class="nn">calzone</span> <span class="k">import</span> <span class="n">describe</span><span class="p">,</span> <span class="n">lemmatize</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can install all packages above: 'pip install -r <a href="http://www.igotthegoodstuff.com/scripts/requirements.txt">requirements.txt</a>'</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Steps-1---4-(tldr)">Steps 1 - 4 (tldr)<a class="anchor-link" href="#Steps-1---4-(tldr)">¶</a></h1><ol>
+<li>Reads in csv-formatted subreddit data.<br>
+1a. You can use the grab_posts function to collect posts inline</br></li>
+<li>Optional: Data manipulation<br>
+2a. Obtain normal distribution of votes by applying log transformation.<br>
+2b. Remove outliers using z-scores greater than -2.5 and less than 2.5</br></br></li>
+<li>Create labeled data (It is the boolean set to whether or not a title will be popular )</li>
+<li>Split data into training and test </li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Let&#x27;s-begin!">Let's begin!<a class="anchor-link" href="#Let&#x27;s-begin!">¶</a></h3><p>The first step of predicting the success of a post is grabbing <a href="https://www.reddit.com/r/datascience">/r/datascience</a> submissions.  I provide several years' worth of <a href="http://www.igotthegoodstuff.com/data/processed_datascience.csv.bz2">data</a> below however you can grab your own data by using the script <a href="http://www.igotthegoodstuff.com/scripts/calzone.py">calzone.py</a></p>
+<p>The second step is to clean up the data.  This can include removing characters or changing the case of words in the titles but most importantly it included dealing specifically with the number of votes that each title received.  We noticed that there were votes that were wildly different than the rest.  To handle these anomalies we removed the outliers based on z-scores.  We then log transformed the votes in order to obtain a normal distribution.  In the histogram below you can see that without normalization the number of votes is left-skewed.</p>
+<p>Thirdly, we specify the target.  The target is the class that is being predicted.  In our case, we are trying to predict whether or not a post receives greater than the average number of votes (SUCCESS!).  For this dataset, the average is 7.5 votes.</p>
+<p>Fourthly, we split the data into training and test sets.</p>
+<h4 id="-Side-note-"><strong><em> Side note </em></strong><a class="anchor-link" href="#-Side-note-">¶</a></h4><ul>
+<li>Use: "python calzone.py -h" for explanation of script commands. </li>
+<li>Edit: config.praw.ini settings for calzone.py to work.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'processed_datascience.csv.bz2'</span><span class="p">)</span>
+
+<span class="c1"># You can use the grab_posts module if you want to grab posts from specific subreddits and time-frames</span>
+<span class="c1"># To retrieve your own posts requires a reddit developer account</span>
+<span class="c1">#from calzone import grab_posts</span>
+<span class="c1">#data = grab_posts(sub='todayilearned', start='01/24/2018', end='02/05/2018', number=30000, verbose=True)</span>
+
+<span class="c1"># Data clean - </span>
+<span class="c1"># 1. remove '/' character</span>
+<span class="c1"># 2. lowercase all letters</span>
+<span class="c1"># 3. lemmatize all words - change words to their root words, ie 'wanted -> want'</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">'title'</span><span class="p">]</span> <span class="o">=</span> <span class="n">lemmatize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+
+<span class="c1">## Optional: Throw out outliers by including rows with Z-Scores less than 2.5 and greater than -2.5</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">'z_scores'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">((</span><span class="n">data</span><span class="o">.</span><span class="n">ups</span><span class="o">-</span><span class="n">data</span><span class="o">.</span><span class="n">ups</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">/</span><span class="n">data</span><span class="o">.</span><span class="n">ups</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">'z_scores'</span><span class="p">]</span><span class="o"><=</span> <span class="mf">2.5</span><span class="p">]</span>
+
+<span class="c1">## Optional: Log transformation of up-votes</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">'log_ups'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">'ups'</span><span class="p">])</span>
+
+<span class="c1"># Create Label column defining whether or not the article's votes exceed the average vote for the subreddit</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">'gtavg'</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">log_ups</span> <span class="o">></span> <span class="n">data</span><span class="o">.</span><span class="n">log_ups</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">train_X</span><span class="p">,</span> <span class="n">test_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">test_y</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> 
+                                                    <span class="n">data</span><span class="o">.</span><span class="n">gtavg</span><span class="p">,</span> 
+                                                    <span class="n">test_size</span><span class="o">=</span><span class="mf">0.20</span><span class="p">,</span>
+                                                    <span class="n">random_state</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'AVERAGE VOTES: '</span><span class="p">,</span> <span class="s1">'</span><span class="si">{:03.1f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">ups</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>AVERAGE VOTES:  7.5
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Let&#x27;s-take-a-look-at-the-distribution-of-Votes">Let's take a look at the distribution of Votes<a class="anchor-link" href="#Let&#x27;s-take-a-look-at-the-distribution-of-Votes">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img alt="UpVote Distribution" src="images/upvote_dist.png" /></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Description-of-Data">Description of Data<a class="anchor-link" href="#Description-of-Data">¶</a></h3><p>As discussed in the introduction, We are building a machine learning model so that we can simply use the title of the post to predict its success. Our data covers the past 3 years of the /r/datascience subreddit and it contains almost 9000 titles.</p>
+<p>Below are the features/attributes of the titles that we're analyzing for feature selection.  This is the process by which we determine which attributes are the most informative .  In the table below, we can see that the title of the posts that we considered to be a success are slightly higher across most features.  The most interesting of these features for me were subjectivity, polarity, and noun_phrases because of the variable correlation coefficients (see matrix below).</p>
+<p>The table below segments attributes for:  ** Please note that the table is a summary and shows the average values of each feature</p>
+<pre><code>1.  All Titles
+2.  Successful Titles (greater than 7 votes)
+3.  Unsuccessful Titles (less than or equal to 7 votes)
+
+</code></pre>
+<p>The measured featuress are:  ** The table below shows the average of these features.</p>
+<pre><code>1.  The numbers characters in the titles
+2.  The number of words in the titles
+3.  The number of noun phrases in the titles
+4.  The subjectivity of the titles - ranging from 0(objective) to 1(subjective)
+5.  The polarity of the titles: -1(negative) to 0(neutral) to 1(positive)
+6.  The number of votes per title
+7.  The number of consonants in titles
+8.  The number of vowels in titles
+9.  The number of syllables in titles
+10. The kincaid score of each title (measures the reading grade level required to read the title)
+11. The flesch score of each titles (measures how easy it is to read the title)
+12. The parts-of-speech(pos) present in each title ( There are 35 pos thus this info isn't included in the table below) 
+
+</code></pre>
+<h4 id="-Side-Note-"><strong><em> Side Note </em></strong><a class="anchor-link" href="#-Side-Note-">¶</a></h4><p>Subjectivity is measured on a scale(0 to 1).  Zero is objective (expressing facts) or one is subjective (expressing opinion)</p>
+<p>Polarity is measured on a scale(-1 to 1).  Noting how positive or negative a title is ie happy versus sad</p>
+<h4 id="Interesting-Tidbits">Interesting Tidbits<a class="anchor-link" href="#Interesting-Tidbits">¶</a></h4><ol>
+<li>The most characters found in a title is 299. Wow!</li>
+<li>The most words found in a title is 58. Double Wow!</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Total Number of Titles in Dataset:'</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">'title'</span><span class="p">]))</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">describe</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1"># calzone function to extract title attributes</span>
+<span class="n">display</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Total Number of Titles in Dataset: 8662
+</pre>
+</div>
+</div>
+<div class="output_area"><div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Characters</th>
+<th>Words</th>
+<th>Noun_Phrases</th>
+<th>Syllables</th>
+<th>Subjectivity</th>
+<th>Polarity</th>
+<th>Votes</th>
+<th>Consonants</th>
+<th>Vowels</th>
+<th>Kincaid</th>
+<th>Flesch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>All</th>
+<td>57</td>
+<td>10</td>
+<td>1.472985</td>
+<td>16</td>
+<td>0.196596</td>
+<td>0.074589</td>
+<td>7.520319</td>
+<td>39</td>
+<td>18</td>
+<td>8</td>
+<td>47</td>
+</tr>
+<tr>
+<th>Success</th>
+<td>60</td>
+<td>11</td>
+<td>1.535070</td>
+<td>17</td>
+<td>0.216157</td>
+<td>0.088646</td>
+<td>19.933066</td>
+<td>41</td>
+<td>19</td>
+<td>8</td>
+<td>48</td>
+</tr>
+<tr>
+<th>Failure</th>
+<td>56</td>
+<td>10</td>
+<td>1.447868</td>
+<td>16</td>
+<td>0.188682</td>
+<td>0.068902</td>
+<td>2.498460</td>
+<td>38</td>
+<td>18</td>
+<td>8</td>
+<td>46</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="-SPECIAL-NOTE:-Feature-Analysis-"><strong><em> SPECIAL NOTE: Feature Analysis </em></strong><a class="anchor-link" href="#-SPECIAL-NOTE:-Feature-Analysis-">¶</a></h4><ol>
+<li>Colinearity can be useful in determining which features to include in analysis (see <a href="http://www.igotthegoodstuff.com/Calzone_feature_analysis.html">here</a>)<ol>
+<li>More than likely the feature selection algorithm will exclude vowels, consonants, and charcount features</li>
+</ol>
+</li>
+</ol>
+<p><img ,="" align="left" alt="Pearson Correlation Matrix" src="images/pearson1.png" /></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Frequency-Distribution-of-words-(unigrams/bigrams)">Frequency Distribution of words (unigrams/bigrams)<a class="anchor-link" href="#Frequency-Distribution-of-words-(unigrams/bigrams)">¶</a></h3><p>We also need to examine the words contained in the titles.  Below is a frequency distribution chart that showcases the most common terms.  As expected, since we are in /r/datascience, the term data scientist is at the top of the word list.  Most interesting are the themes that become apparent:</p>
+<ol>
+<li>Positions (data scientist)</li>
+<li>Tools & Topics (big data, python, machine learning, etc)</li>
+<li>Employment (Career, experience, job, work)</li>
+<li>Education ( learning, course, masters)</li>
+</ol>
+<p><img ,="" align="left" alt="Frequency Distribution" src="images/freqdist.png" /></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Step-5-7-(tldr):">Step 5-7 (tldr):<a class="anchor-link" href="#Step-5-7-(tldr):">¶</a></h1><ol>
+<li><p>Feature Extraction (see above note on colinearity)</p>
+<ol>
+<li>pos:
+  a count of 35 different parts of speech in each title</li>
+<li>read:
+  scores related to readability of titles
+<pre><code>1. Flesch_kincaid_grade: the grade level required to read the title
+2. syllable count: the number of syllables in the title
+3. Flesch_reading_ease: score of how easy it is to read the title</code></pre>
+</li>
+<li>words:
+  any number of the following:
+<pre><code>1. Consonants - the number of consonants in each title
+2. Vowels - the number of vowels in each title
+3. Words - the number of words in each title
+4. Characters - the number of characters in each title</code></pre>
+</li>
+<li>blob:
+  the following characteristics of each title
+<pre><code>1. Noun Phrases - the number of noun phrases in each title
+2. Subjectivity - Objectivity vesus Subjectivity(range 0 to 1)
+3. Polarity - Negative(-1) to Positive(1) Sentiment</code></pre>
+</li>
+<li>title:
+  Vectorizes text, decomposes vector, and select features.  
+<pre><code>1. Tf-idf Vectorizer
+    A. Creates a word vector 
+        1. word is weighted by its occurence within the corpus.
+    B.  Use bi-grams, stop_words, and sublinear term frequency
+2.  TruncatedSVD reduces features through LSA decomposition
+3.  SelectPercentile selects the top 10% of features</code></pre>
+</li>
+</ol>
+</li>
+<li><p>Modeling - Classifier: RandomForest</p>
+<ol>
+<li>We chose this classifier for its speed.  </li>
+<li>We examined other classifiers but the results were pretty much the same.  </li>
+<li>We generate prediction model by fitting on training data</li>
+<li>We use the model to predict the test data labels( successful/unsuccessful)</li>
+</ol>
+</li>
+<li><p>Model Evaluation</p>
+<ol>
+<li>Preliminary Evaluation<ol>
+<li>Measure prediction accuracy</li>
+<li>Cross validate (measure the predictive performance of a statistical model)</li>
+<li>Measure F1 Score</li>
+</ol>
+</li>
+<li>Visual Evaluation</li>
+</ol>
+</li>
+<li><p>Model Improvements</p>
+<ol>
+<li>Improved by tuning hyperparameters, see <a href="http://www.igotthegoodstuff.com/Calzone_hyperparameter_optomization.html">here</a><ol>
+<li>However in this instance, tuning only resulted in slight improve (1%)</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Feature-Extraction,-Feature-Selection-and-Modeling">Feature Extraction, Feature Selection and Modeling<a class="anchor-link" href="#Feature-Extraction,-Feature-Selection-and-Modeling">¶</a></h3><p>The titles provide us with two different types of information.  The first type is the general attributes of the title, ie how many words, syllables, vowels, etc... (see above for list of attributes) in each title.  The second type is the words themselves.  The question is how do we use both types of information to predict if a title will be successful.  For the attributes, it is simple because they are numbers; it could be as easy as finding out which combination of attributes define success versus failure.  How to define success with just words becomes tricky.  Essentially, performing machine learning on the titles requires that the text content be turned into numerical feature vectors(feature extraction).</p>
+<p>For feature extraction on the titles we used a count vectorizer that measures term frequency(tf), ie how often a word appears in a title.  For instance, if we do this for the following sentences then we produce the matrix below.</p>
+<h4 id="Title-A:-The-dog-jumped-over-the-fence">Title A: The dog jumped over the fence<a class="anchor-link" href="#Title-A:-The-dog-jumped-over-the-fence">¶</a></h4><h4 id="Title-B:-The-cat-chased-the-dog">Title B: The cat chased the dog<a class="anchor-link" href="#Title-B:-The-cat-chased-the-dog">¶</a></h4><h4 id="Title-C:-The-white-cat-chased-the-brown-cat-who-jumped-over-the-orange-cat">Title C: The white cat chased the brown cat who jumped over the orange cat<a class="anchor-link" href="#Title-C:-The-white-cat-chased-the-brown-cat-who-jumped-over-the-orange-cat">¶</a></h4><table>
+<thead><tr>
+<th style="text-align:center"></th>
+<th>the</th>
+<th>dog</th>
+<th>jumped</th>
+<th>over</th>
+<th>fence</th>
+<th>cat</th>
+<th>chased</th>
+<th>white</th>
+<th>brown</th>
+<th>who</th>
+<th>orange</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Title A</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td style="text-align:center">Title B</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td style="text-align:center">Title C</td>
+<td>3</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>3</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>The downside of just using tf is that words that appear most often tend to dominate the matrix.  To overcome this we use the product of term frequency and inverse document frequency(tf-idf).  Idf is the measure of whether a term is common or rare across all documents [Side note 2].</p>
+<p>Essentially, Tf-idf creates a word vector in which a word is weighted by its occurence not only in the title it was derived from but also the corpus(the entire group of titles). A complete example on how tf-idf is calculated can be found <a href="http://www.igotthegoodstuff.com/explain_tfidf.html">here</a></p>
+<p>The tf-idf process leaves us with about a vocabulary of 58,000 (see side note, for explanation of why this is so large).  Not all these words/phrases are going to provide useful information.  The trick is to find a reduced dimensional representation of our matrix that emphasizes the strongest relationships and throws away the noise.  To achieve this, we use a dimension reduction technique called TruncatedSVD aka Latent Semantic Analysis<a href="https://technowiki.wordpress.com/2011/08/27/latent-semantic-analysis-lsa-tutorial/">(LSA)</a>.  After reducing our dimensions with LSA, we further compact our matrix by using Anova F-Value feature selection.</p>
+<p>Let's not forget about the title attributes, they also need to undergo feature selection.  We do this by using tree-based estimators(ExtraTreesClassifier) to compute feature importance, which can be used to discard irrelevant features.  This results in a reduction from 45 to 17 most important attributes.</p>
+<p>Using Sci-kit Learn's "feature union" function, we can combine the attribute and tf-idf vectors then insert this vector into a Random Forest Classifier.  We chose Random Forest only after trying out several other classifers, such as Naive Bayes, Multilayer Perceptron, and K Nearest Neighbors.  We optimized our model by tuning the <a href="http://www.igotthegoodstuff.com/Calzone_hyperparameter_optomization.html">hyperparameters</a>.
+We evaluated our model with common scoring methods; Our accuracy was 55%.  The charts below provide more visual evaluations.  A great model would have higher precision, recall, and F1 Score plus a ROC curve that hugs the y-axis.  I do not have a great model and I'm ok with that!  The code for the visual evaluation charts is <a href="http://www.igotthegoodstuff.com/Calzone_model_evaluation.html">here</a>.</p>
+<h4 id="Side-Note-1:">Side Note 1:<a class="anchor-link" href="#Side-Note-1:">¶</a></h4><p>To get even more information out of a title we use unigrams, bigrams and trigrams.  This is a group of one, two or three words.  For example, "The boy ran" would break down into 'the', 'boy', 'ran', 'the boy', 'boy ran', and 'the boy ran'.</p>
+<h4 id="Side-Note-2:">Side Note 2:<a class="anchor-link" href="#Side-Note-2:">¶</a></h4><p>tf-idf <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf">reference</a></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 1. Sklearn has a pipeline Class that directs the flow of model creation; </span>
+<span class="c1"># below the pipeline corals the features into the Random Forest classifer.</span>
+<span class="c1"># 2. Within the pipeline is a sklearn Class called FeatureUnion.  </span>
+<span class="c1"># 3. Feature Union allows for the joining of multiple features into a single vector</span>
+<span class="c1"># 4. Within the feature union is a transformer list,</span>
+<span class="c1"># containingclasses that performed the functions described above</span>
+<span class="c1"># 5. The final pipeline item is the declaration of a classifier,</span>
+<span class="c1"># that the combined feature vector will be inserted into</span>
+
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">'union'</span><span class="p">,</span> <span class="n">FeatureUnion</span><span class="p">(</span>
+        <span class="n">transformer_list</span><span class="o">=</span><span class="p">[</span>
+                      
+            <span class="p">(</span><span class="s1">'pipe'</span><span class="p">,</span> <span class="n">Pipeline</span><span class="p">([</span>
+                <span class="p">(</span><span class="s1">'inner'</span><span class="p">,</span> <span class="n">FeatureUnion</span><span class="p">(</span>
+                    <span class="n">transformer_list</span><span class="o">=</span><span class="p">[</span>
+                        <span class="p">(</span><span class="s1">'pos'</span><span class="p">,</span> <span class="n">POS</span><span class="p">()),</span>
+
+                        <span class="p">(</span><span class="s1">'read'</span><span class="p">,</span> <span class="n">Readable</span><span class="p">()),</span>
+
+                        <span class="p">(</span><span class="s1">'words'</span><span class="p">,</span> <span class="n">Words</span><span class="p">()),</span>
+
+                        <span class="p">(</span><span class="s1">'blob'</span><span class="p">,</span> <span class="n">Pipeline</span><span class="p">([</span>
+                            <span class="p">(</span><span class="s1">'all'</span><span class="p">,</span> <span class="n">Blob</span><span class="p">()),</span>
+                            <span class="p">(</span><span class="s1">'minmax'</span><span class="p">,</span> <span class="n">MinMaxScaler</span><span class="p">()),</span>
+                        <span class="p">])),</span>
+                <span class="p">])),</span>
+                <span class="p">(</span><span class="s1">'select'</span><span class="p">,</span> <span class="n">SelectFromModel</span><span class="p">(</span><span class="n">ExtraTreesClassifier</span><span class="p">()))</span>
+   
+            <span class="p">])),</span>
+                      
+            <span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="n">Pipeline</span><span class="p">([</span>
+                <span class="p">(</span><span class="s1">'tfidf'</span><span class="p">,</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">token_pattern</span><span class="o">=</span><span class="s1">u'(?ui)</span><span class="se">\\</span><span class="s1">b</span><span class="se">\\</span><span class="s1">w*[a-z]+</span><span class="se">\\</span><span class="s1">w*</span><span class="se">\\</span><span class="s1">b'</span><span class="p">,</span> 
+                                          <span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">sublinear_tf</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                          <span class="n">strip_accents</span><span class="o">=</span><span class="s1">'unicode'</span><span class="p">,</span> <span class="n">stop_words</span><span class="o">=</span><span class="s1">'english'</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s1">'svd'</span><span class="p">,</span> <span class="n">TruncatedSVD</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">120</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s1">'normalize'</span><span class="p">,</span> <span class="n">MinMaxScaler</span><span class="p">(</span><span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)),</span>
+                <span class="p">(</span><span class="s1">'selector'</span><span class="p">,</span> <span class="n">SelectPercentile</span><span class="p">(</span><span class="n">f_classif</span><span class="p">,</span> <span class="n">percentile</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
+            <span class="p">])),</span>
+
+            
+            <span class="p">])),</span>
+    <span class="p">(</span><span class="s1">'clf'</span><span class="p">,</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">190</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">max_features</span><span class="o">=</span><span class="s1">'log2'</span><span class="p">,</span>
+                                  <span class="n">min_samples_leaf</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">min_samples_split</span><span class="o">=</span><span class="mi">77</span><span class="p">)),</span>
+        <span class="p">])</span>
+
+<span class="c1"># Train model</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">)</span>
+
+<span class="c1"># Predict Test Set</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_X</span><span class="p">)</span>
+
+<span class="c1"># Save our model</span>
+<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">pipeline</span><span class="p">,</span> <span class="s1">'datascience.xz'</span><span class="p">,</span> <span class="n">compress</span><span class="o">=</span><span class="p">(</span><span class="s1">'xz'</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+
+<span class="c1"># Test it out</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">'A tutorial on my machine-learning workflow </span><span class="se">\</span>
+<span class="s1">                            for predicting whether or not this post will be popular'</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>[&apos;datascience.pkl&apos;]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Model-Evaluation---Preliminary-Evaluation">Model Evaluation - Preliminary Evaluation<a class="anchor-link" href="#Model-Evaluation---Preliminary-Evaluation">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Measure prediction Accuracy and F1 Score</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_pred</span><span class="o">=</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">y_true</span><span class="o">=</span><span class="n">test_y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Accuracy: </span><span class="si">{:03.1f}</span><span class="s1">%'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'F1 Score: </span><span class="si">{:.3f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f1_score</span><span class="p">(</span><span class="n">test_y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Accuracy: 54.9%
+F1 Score: 0.538
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Cross Validate prediction Score</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'CV Scores: '</span><span class="p">,</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">pipeline</span><span class="p">,</span> <span class="n">train_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CV Scores:  [ 0.56596972  0.52597403  0.56204906  0.57039711  0.56245487]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Model-Evaluation---Visual-Evaluation">Model Evaluation - Visual Evaluation<a class="anchor-link" href="#Model-Evaluation---Visual-Evaluation">¶</a></h3><p>In the Graphs below, False or Failure equates to less than 7.5 votes while True or Success equates to greater than 7.5 votes</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead><tr>
+<th style="text-align:center">Classification Report</th>
+<th style="text-align:center">Confusion Matrix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="images/clsreport1.png" /></td>
+<td style="text-align:center"><img src="images/confusion.png" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead><tr>
+<th style="text-align:center">Class Balance</th>
+<th style="text-align:center">ROC Curve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="images/classbalance.png" /></td>
+<td style="text-align:center"><img src="images/rocauc.png" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Conclusion:">Conclusion:<a class="anchor-link" href="#Conclusion:">¶</a></h2><p>My goal was to go through and document the entire process of building a classifier.  I learned a lot.  Now, I know that the title isn't sufficient enough to predict whether or not a post will be successful.  Getting to this conclusion after so many hours of work was heartbreaking but at the same time very fulfilling.  I hope you can take my failure and use it to build successful models.  Also, I hope you return for my follow-up blog post on how to predict the number of votes a title will receive.  Until next time, Adios :)</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="P.S.-I-am-looking-to-switch-careers-from-computational-biology-to-data-science.-Message-me-if-you-have-any-positions-available.">P.S. I am looking to switch careers from computational biology to data science. Message me if you have any positions available.<a class="anchor-link" href="#P.S.-I-am-looking-to-switch-careers-from-computational-biology-to-data-science.-Message-me-if-you-have-any-positions-available.">¶</a></h3>
+</div>
+</div>
+</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+  </div>
+
+    <h3>Related content</h3>
+    <!-- TODO: Use fancier related layout, as in https://kevin.deldycke.com/2012/04/beautify-contextual-related-posts-wordpress-plugin/ -->
+    <ul>
+        <li><a href="http://www.igotthegoodstuff.com/Calzone_feature_analysis.html">Calzone Feature Analysis</a></li>
+        <li><a href="http://www.igotthegoodstuff.com/Calzone_model_evaluation.html">Calzone Model Evaluation</a></li>
+        <li><a href="http://www.igotthegoodstuff.com/Calzone_hyperparameter_optomization.html">Calzone hyperparameter optomization</a></li>
+        <li><a href="http://www.igotthegoodstuff.com/Predicting-Success-of-reddit-post.html">What's in a name?</a></li>
+        <li><a href="http://www.igotthegoodstuff.com/explain_tfidf.html">Term Frequency - Inverse Document Frequency</a></li>
+      </ul>
+
+    <div class="comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'igotthegoodsuff';
+        var disqus_identifier = "drafts/Test.html";
+        var disqus_title = "Test";
+        var disqus_url = "http://www.igotthegoodstuff.com/drafts/Test.html";
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus</a>.</noscript>
+    </div>
+
+        </div>
+
+          <div class="col-md-3">
+  <div class="well">
+
+    <p><abbr title="2018-02-12T11:11:00-05:00"><i class="fa fa-calendar"></i> February 12, 2018</abbr></p>
+
+      <p><address>
+        <i class="fa fa-user"></i> By
+          <a href="http://www.igotthegoodstuff.com/author/larry-gray.html" rel="author">Larry Gray</a>
+      </address></p>
+
+    <hr/>
+
+      <p>
+              <a href="http://www.igotthegoodstuff.com/category/machine-learning.html" rel="tag"
+                  data-toggle="tooltip" class="label label-info"
+                  title="8 articles in this category">Machine Learning</a>
+            <a href="/tag/machine-learning.html" data-toggle="tooltip"
+      class="label label-default"
+      title="8 articles with this tag">machine-learning</a>
+            <a href="/tag/reddit.html" data-toggle="tooltip"
+      class="label label-default"
+      title="6 articles with this tag">reddit</a>
+            <a href="/tag/classification.html" data-toggle="tooltip"
+      class="label label-default"
+      title="5 articles with this tag">classification</a>
+            <a href="/tag/sklearn.html" data-toggle="tooltip"
+      class="label label-default"
+      title="5 articles with this tag">sklearn</a>
+      </p>
+      <hr/>
+
+
+
+  </div>
+            
+          </div>
+
+      </div>
+
+    </div>
+
+    <!-- TODO: make footer sticky -->
+    <footer class="container-fluid">
+      <div class="container">
+        <div class="row">
+
+            <div class="col-md-2">
+                <h5>Social</h5>
+                <ul class="list-unstyled">
+                  <li>  <a href="https://twitter.com/larrygray">
+      <i class="fa fa-twitter"></i>
+    twitter
+  </a></li>
+                  <li>  <a href="https://github.com/lwgray">
+      <i class="fa fa-github"></i>
+    github
+  </a></li>
+                  <li>  <a href="https://www.linkedin.com/in/larry-gray-phd/">
+      <img src="https://icons.better-idea.org/icon?url=www.linkedin.com&size=16" width="16" height="16" class="icon" alt="www.linkedin.com icon"/>
+    linkedin
+  </a></li>
+                  <li>  <a href="//igotthegoodstuff.com/feeds/all.atom.xml">
+      <i class="fa fa-external-link"></i>
+    rss
+  </a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                  <li>  <a href="https://lwgray.github.io">
+      <img src="https://icons.better-idea.org/icon?url=lwgray.github.io&size=16" width="16" height="16" class="icon" alt="lwgray.github.io icon"/>
+    Portfolio
+  </a></li>
+                </ul>
+            </div>
+
+          <div class="col-md-2">
+            <h5>Browse content by</h5>
+            <ul class="list-unstyled">
+            </ul>
+          </div>
+
+          <div class="col-md-2 text-muted">
+            <h5>Copyright notice</h5>
+            <p>© Copyright 2017-2018 Larry Gray.</p>
+          </div>
+
+          <div class="col-md-2 text-muted">
+            <h5>Disclaimer</h5>
+              <p>All opinions expressed in this site are my own personal opinions and are not endorsed by, nor do they represent the opinions of my previous, current and future employers or any of its affiliates, partners or customers.</p>
+          </div>
+
+          <div class="col-md-2">
+              <h5>Feeds</h5>
+              <ul class="list-unstyled">
+                  <li><small><a href="http://www.igotthegoodstuff.com/feeds/all.atom.xml"><i class="fa fa-rss"></i> All posts (Atom)</a></small></li>
+                  <li><small><a href="http://www.igotthegoodstuff.com/feeds/machine-learning.atom.xml"><i class="fa fa-rss"></i> Category: Machine Learning (Atom)</a></small></li>
+              </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <h5 class="text-right"><a href="#"><i class="fa fa-arrow-up"></i> Back to top</a></h5>
+
+      <div class="container">
+        <div class="row col-md-12 text-muted text-center">
+          Site generated by <a href="https://getpelican.com"> Pelican</a>.<br/>
+          <a href="https://github.com/kdeldycke/plumage"> Plumage</a> theme by <a href="https://kevin.deldycke.com">Kevin Deldycke</a>.
+        </div>
+      </div>
+
+    </footer>
+
+    <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-106437223-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+    <script src="http://www.igotthegoodstuff.com/theme/js/jquery.mglass.js"></script>
+    <script src="http://www.igotthegoodstuff.com/theme/js/application.js"></script>
+
+  </body>
+</html>

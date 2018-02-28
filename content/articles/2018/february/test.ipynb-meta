@@ -1,0 +1,9 @@
+Title: Test 
+slug: Test
+Date: 2018-02-12 11:11
+Category: Machine Learning
+Tags: machine-learning, reddit, classification, sklearn
+Author: Larry Gray
+Status: draft
+{% notebook test.ipynb %}
+
