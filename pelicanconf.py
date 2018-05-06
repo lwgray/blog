@@ -61,6 +61,7 @@ SOCIAL = (('twitter', 'https://twitter.com/larrygray'),
 
 
 MENUITEMS = (('Portfolio', 'https://lwgray.github.io'),
+             ('Resume', 'https://lwgray.github.io/resume.html'),
              ('Archives', '/archives.html'),
              ('Categories', '/categories.html'),
              ('Tags', '/tags.html'),)
