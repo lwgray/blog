@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Larry Gray</title><link href="http://www.igotthegoodstuff.com/" rel="alternate"></link><link href="http://www.igotthegoodstuff.com/feeds/machine-learning.atom.xml" rel="self"></link><id>http://www.igotthegoodstuff.com/</id><updated>2018-02-27T21:16:00-05:00</updated><entry><title>District Data Lab Research Lab Proposal 2</title><link href="http://www.igotthegoodstuff.com/district_datalab_reasearch_lab_proposal_2.html" rel="alternate"></link><published>2018-02-27T21:16:00-05:00</published><updated>2018-02-27T21:16:00-05:00</updated><author><name>Larry Gray</name></author><id>tag:www.igotthegoodstuff.com,2018-02-27:district_datalab_reasearch_lab_proposal_2.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Larry Gray</title><link href="/" rel="alternate"></link><link href="/feeds/machine-learning.atom.xml" rel="self"></link><id>/</id><updated>2018-02-27T21:16:00-05:00</updated><entry><title>District Data Lab Research Lab Proposal 2</title><link href="/district_datalab_reasearch_lab_proposal_2.html" rel="alternate"></link><published>2018-02-27T21:16:00-05:00</published><updated>2018-02-27T21:16:00-05:00</updated><author><name>Larry Gray</name></author><id>tag:,2018-02-27:district_datalab_reasearch_lab_proposal_2.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -446,7 +446,7 @@ AAAASUVORK5CYII=
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="machine-learning"></category><category term="ddl"></category><category term="proposals"></category></entry><entry><title>District Data Lab Research Lab Proposal 1</title><link href="http://www.igotthegoodstuff.com/district_datalab_reasearch_lab_proposal_1.html" rel="alternate"></link><published>2018-02-27T21:14:00-05:00</published><updated>2018-02-27T21:14:00-05:00</updated><author><name>Larry Gray</name></author><id>tag:www.igotthegoodstuff.com,2018-02-27:district_datalab_reasearch_lab_proposal_1.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+</summary><category term="machine-learning"></category><category term="ddl"></category><category term="proposals"></category></entry><entry><title>District Data Lab Research Lab Proposal 1</title><link href="/district_datalab_reasearch_lab_proposal_1.html" rel="alternate"></link><published>2018-02-27T21:14:00-05:00</published><updated>2018-02-27T21:14:00-05:00</updated><author><name>Larry Gray</name></author><id>tag:,2018-02-27:district_datalab_reasearch_lab_proposal_1.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -692,7 +692,7 @@ AAAASUVORK5CYII=
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="machine-learning"></category><category term="ddl"></category><category term="proposals"></category></entry><entry><title>Term Frequency - Inverse Document Frequency</title><link href="http://www.igotthegoodstuff.com/explain_tfidf.html" rel="alternate"></link><published>2018-02-11T23:20:00-05:00</published><updated>2018-02-11T23:20:00-05:00</updated><author><name>Larry Gray</name></author><id>tag:www.igotthegoodstuff.com,2018-02-11:explain_tfidf.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+</summary><category term="machine-learning"></category><category term="ddl"></category><category term="proposals"></category></entry><entry><title>Term Frequency - Inverse Document Frequency</title><link href="/explain_tfidf.html" rel="alternate"></link><published>2018-02-11T23:20:00-05:00</published><updated>2018-02-11T23:20:00-05:00</updated><author><name>Larry Gray</name></author><id>tag:,2018-02-11:explain_tfidf.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -894,7 +894,7 @@ tfidf("cat", d_3) = tf("cat", d_3) \times idf("cat", D) = 0.231 \times 0.4 = 0.0
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="machine-learning"></category><category term="reddit"></category><category term="classification"></category><category term="sklearn"></category><category term="tf-idf"></category></entry><entry><title>Calzone Model Evaluation</title><link href="http://www.igotthegoodstuff.com/Calzone_model_evaluation.html" rel="alternate"></link><published>2018-02-11T23:17:00-05:00</published><updated>2018-02-11T23:17:00-05:00</updated><author><name>Larry Gray</name></author><id>tag:www.igotthegoodstuff.com,2018-02-11:Calzone_model_evaluation.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+</summary><category term="machine-learning"></category><category term="reddit"></category><category term="classification"></category><category term="sklearn"></category><category term="tf-idf"></category></entry><entry><title>Calzone Model Evaluation</title><link href="/Calzone_model_evaluation.html" rel="alternate"></link><published>2018-02-11T23:17:00-05:00</published><updated>2018-02-11T23:17:00-05:00</updated><author><name>Larry Gray</name></author><id>tag:,2018-02-11:Calzone_model_evaluation.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -2161,7 +2161,7 @@ AAAAAElFTkSuQmCC
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="machine-learning"></category><category term="reddit"></category><category term="classification"></category><category term="sklearn"></category></entry><entry><title>Calzone hyperparameter optomization</title><link href="http://www.igotthegoodstuff.com/Calzone_hyperparameter_optomization.html" rel="alternate"></link><published>2018-02-11T23:16:00-05:00</published><updated>2018-02-11T23:16:00-05:00</updated><author><name>Larry Gray</name></author><id>tag:www.igotthegoodstuff.com,2018-02-11:Calzone_hyperparameter_optomization.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+</summary><category term="machine-learning"></category><category term="reddit"></category><category term="classification"></category><category term="sklearn"></category></entry><entry><title>Calzone hyperparameter optomization</title><link href="/Calzone_hyperparameter_optomization.html" rel="alternate"></link><published>2018-02-11T23:16:00-05:00</published><updated>2018-02-11T23:16:00-05:00</updated><author><name>Larry Gray</name></author><id>tag:,2018-02-11:Calzone_hyperparameter_optomization.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -2426,7 +2426,7 @@ F1 Score: 0.048192771084337345
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="machine-learning"></category><category term="reddit"></category><category term="classification"></category><category term="sklearn"></category></entry><entry><title>Calzone Feature Analysis</title><link href="http://www.igotthegoodstuff.com/Calzone_feature_analysis.html" rel="alternate"></link><published>2018-02-11T23:15:00-05:00</published><updated>2018-02-11T23:15:00-05:00</updated><author><name>Larry Gray</name></author><id>tag:www.igotthegoodstuff.com,2018-02-11:Calzone_feature_analysis.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+</summary><category term="machine-learning"></category><category term="reddit"></category><category term="classification"></category><category term="sklearn"></category></entry><entry><title>Calzone Feature Analysis</title><link href="/Calzone_feature_analysis.html" rel="alternate"></link><published>2018-02-11T23:15:00-05:00</published><updated>2018-02-11T23:15:00-05:00</updated><author><name>Larry Gray</name></author><id>tag:,2018-02-11:Calzone_feature_analysis.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -5110,7 +5110,7 @@ YII=
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="machine-learning"></category><category term="reddit"></category><category term="classification"></category><category term="sklearn"></category></entry><entry><title>What's in a name?</title><link href="http://www.igotthegoodstuff.com/Predicting-Success-of-reddit-post.html" rel="alternate"></link><published>2018-02-11T20:49:00-05:00</published><updated>2018-02-11T20:49:00-05:00</updated><author><name>Larry Gray</name></author><id>tag:www.igotthegoodstuff.com,2018-02-11:Predicting-Success-of-reddit-post.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+</summary><category term="machine-learning"></category><category term="reddit"></category><category term="classification"></category><category term="sklearn"></category></entry><entry><title>What's in a name?</title><link href="/Predicting-Success-of-reddit-post.html" rel="alternate"></link><published>2018-02-11T20:49:00-05:00</published><updated>2018-02-11T20:49:00-05:00</updated><author><name>Larry Gray</name></author><id>tag:,2018-02-11:Predicting-Success-of-reddit-post.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -5227,7 +5227,7 @@ YII=
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;You can install all packages above: 'pip install -r &lt;a href="http://www.igotthegoodstuff.com/scripts/requirements.txt"&gt;requirements.txt&lt;/a&gt;'&lt;/p&gt;
+&lt;p&gt;You can install all packages above: 'pip install -r &lt;a href="/scripts/requirements.txt"&gt;requirements.txt&lt;/a&gt;'&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -5253,7 +5253,7 @@ YII=
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Let&amp;#x27;s-begin!"&gt;Let's begin!&lt;a class="anchor-link" href="#Let&amp;#x27;s-begin!"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The first step of predicting the success of a post is grabbing &lt;a href="https://www.reddit.com/r/datascience"&gt;/r/datascience&lt;/a&gt; submissions.  I provide several years' worth of &lt;a href="http://www.igotthegoodstuff.com/data/processed_datascience.csv.bz2"&gt;data&lt;/a&gt; below however you can grab your own data by using the script &lt;a href="http://www.igotthegoodstuff.com/scripts/calzone.py"&gt;calzone.py&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="Let&amp;#x27;s-begin!"&gt;Let's begin!&lt;a class="anchor-link" href="#Let&amp;#x27;s-begin!"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The first step of predicting the success of a post is grabbing &lt;a href="https://www.reddit.com/r/datascience"&gt;/r/datascience&lt;/a&gt; submissions.  I provide several years' worth of &lt;a href="/data/processed_datascience.csv.bz2"&gt;data&lt;/a&gt; below however you can grab your own data by using the script &lt;a href="/scripts/calzone.py"&gt;calzone.py&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The second step is to clean up the data.  This can include removing characters or changing the case of words in the titles but most importantly it included dealing specifically with the number of votes that each title received.  We noticed that there were votes that were wildly different than the rest.  To handle these anomalies we removed the outliers based on z-scores.  We then log transformed the votes in order to obtain a normal distribution.  In the histogram below you can see that without normalization the number of votes is left-skewed.&lt;/p&gt;
 &lt;p&gt;Thirdly, we specify the target.  The target is the class that is being predicted.  In our case, we are trying to predict whether or not a post receives greater than the average number of votes (SUCCESS!).  For this dataset, the average is 7.5 votes.&lt;/p&gt;
 &lt;p&gt;Fourthly, we split the data into training and test sets.&lt;/p&gt;
@@ -5479,7 +5479,7 @@ YII=
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h4 id="-SPECIAL-NOTE:-Feature-Analysis-"&gt;&lt;strong&gt;&lt;em&gt; SPECIAL NOTE: Feature Analysis &lt;/em&gt;&lt;/strong&gt;&lt;a class="anchor-link" href="#-SPECIAL-NOTE:-Feature-Analysis-"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;Colinearity can be useful in determining which features to include in analysis (see &lt;a href="http://www.igotthegoodstuff.com/Calzone_feature_analysis.html"&gt;here&lt;/a&gt;)&lt;ol&gt;
+&lt;li&gt;Colinearity can be useful in determining which features to include in analysis (see &lt;a href="/Calzone_feature_analysis.html"&gt;here&lt;/a&gt;)&lt;ol&gt;
 &lt;li&gt;More than likely the feature selection algorithm will exclude vowels, consonants, and charcount features&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
@@ -5565,7 +5565,7 @@ YII=
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Model Improvements&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Improved by tuning hyperparameters, see &lt;a href="http://www.igotthegoodstuff.com/Calzone_hyperparameter_optomization.html"&gt;here&lt;/a&gt;&lt;ol&gt;
+&lt;li&gt;Improved by tuning hyperparameters, see &lt;a href="/Calzone_hyperparameter_optomization.html"&gt;here&lt;/a&gt;&lt;ol&gt;
 &lt;li&gt;However in this instance, tuning only resulted in slight improve (1%)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
@@ -5644,11 +5644,11 @@ YII=
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;The downside of just using tf is that words that appear most often tend to dominate the matrix.  To overcome this we use the product of term frequency and inverse document frequency(tf-idf).  Idf is the measure of whether a term is common or rare across all documents [Side note 2].&lt;/p&gt;
-&lt;p&gt;Essentially, Tf-idf creates a word vector in which a word is weighted by its occurence not only in the title it was derived from but also the corpus(the entire group of titles). A complete example on how tf-idf is calculated can be found &lt;a href="http://www.igotthegoodstuff.com/explain_tfidf.html"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Essentially, Tf-idf creates a word vector in which a word is weighted by its occurence not only in the title it was derived from but also the corpus(the entire group of titles). A complete example on how tf-idf is calculated can be found &lt;a href="/explain_tfidf.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The tf-idf process leaves us with about a vocabulary of 58,000 (see side note, for explanation of why this is so large).  Not all these words/phrases are going to provide useful information.  The trick is to find a reduced dimensional representation of our matrix that emphasizes the strongest relationships and throws away the noise.  To achieve this, we use a dimension reduction technique called TruncatedSVD aka Latent Semantic Analysis&lt;a href="https://technowiki.wordpress.com/2011/08/27/latent-semantic-analysis-lsa-tutorial/"&gt;(LSA)&lt;/a&gt;.  After reducing our dimensions with LSA, we further compact our matrix by using Anova F-Value feature selection.&lt;/p&gt;
 &lt;p&gt;Let's not forget about the title attributes, they also need to undergo feature selection.  We do this by using tree-based estimators(ExtraTreesClassifier) to compute feature importance, which can be used to discard irrelevant features.  This results in a reduction from 45 to 17 most important attributes.&lt;/p&gt;
-&lt;p&gt;Using Sci-kit Learn's "feature union" function, we can combine the attribute and tf-idf vectors then insert this vector into a Random Forest Classifier.  We chose Random Forest only after trying out several other classifers, such as Naive Bayes, Multilayer Perceptron, and K Nearest Neighbors.  We optimized our model by tuning the &lt;a href="http://www.igotthegoodstuff.com/Calzone_hyperparameter_optomization.html"&gt;hyperparameters&lt;/a&gt;.
-We evaluated our model with common scoring methods; Our accuracy was 55%.  The charts below provide more visual evaluations.  A great model would have higher precision, recall, and F1 Score plus a ROC curve that hugs the y-axis.  I do not have a great model and I'm ok with that!  The code for the visual evaluation charts is &lt;a href="http://www.igotthegoodstuff.com/Calzone_model_evaluation.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Using Sci-kit Learn's "feature union" function, we can combine the attribute and tf-idf vectors then insert this vector into a Random Forest Classifier.  We chose Random Forest only after trying out several other classifers, such as Naive Bayes, Multilayer Perceptron, and K Nearest Neighbors.  We optimized our model by tuning the &lt;a href="/Calzone_hyperparameter_optomization.html"&gt;hyperparameters&lt;/a&gt;.
+We evaluated our model with common scoring methods; Our accuracy was 55%.  The charts below provide more visual evaluations.  A great model would have higher precision, recall, and F1 Score plus a ROC curve that hugs the y-axis.  I do not have a great model and I'm ok with that!  The code for the visual evaluation charts is &lt;a href="/Calzone_model_evaluation.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id="Side-Note-1:"&gt;Side Note 1:&lt;a class="anchor-link" href="#Side-Note-1:"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;To get even more information out of a title we use unigrams, bigrams and trigrams.  This is a group of one, two or three words.  For example, "The boy ran" would break down into 'the', 'boy', 'ran', 'the boy', 'boy ran', and 'the boy ran'.&lt;/p&gt;
 &lt;h4 id="Side-Note-2:"&gt;Side Note 2:&lt;a class="anchor-link" href="#Side-Note-2:"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;tf-idf &lt;a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf"&gt;reference&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -5885,7 +5885,7 @@ F1 Score: 0.538
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="machine-learning"></category><category term="reddit"></category><category term="classification"></category><category term="sklearn"></category></entry><entry><title>Can Machine Learning predict how many upvotes your post will receive? Part 1.</title><link href="http://www.igotthegoodstuff.com/Predicting-Reddit-Upvotes.html" rel="alternate"></link><published>2018-01-14T16:52:00-05:00</published><updated>2018-01-14T16:52:00-05:00</updated><author><name>Larry Gray</name></author><id>tag:www.igotthegoodstuff.com,2018-01-14:Predicting-Reddit-Upvotes.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+</summary><category term="machine-learning"></category><category term="reddit"></category><category term="classification"></category><category term="sklearn"></category></entry><entry><title>Can Machine Learning predict how many upvotes your post will receive? Part 1.</title><link href="/Predicting-Reddit-Upvotes.html" rel="alternate"></link><published>2018-01-14T16:52:00-05:00</published><updated>2018-01-14T16:52:00-05:00</updated><author><name>Larry Gray</name></author><id>tag:,2018-01-14:Predicting-Reddit-Upvotes.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *

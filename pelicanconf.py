@@ -50,7 +50,8 @@ HOME_HIDE_TAGS = True
 
 
 # Blogroll
-LINKS = (('Portfolio', 'https://lwgray.github.io'),)
+LINKS = (('Portfolio', 'https://lwgray.github.io'),
+         ('Resume', 'https://lwgray.github.io/resume.html'),)
 
 # Social widget
 SOCIAL = (('twitter', 'https://twitter.com/larrygray'),
